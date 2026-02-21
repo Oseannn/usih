@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>USIH - Admissions et Scolarité</title>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#b82e3b",
+                        "primary-dark": "#9a2531",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#112120",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2c2b",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"],
+                        "sans": ["Public Sans", "sans-serif"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased selection:bg-primary selection:text-white">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Header -->
+        <header class="sticky top-0 z-50 w-full bg-white border-b border-gray-100 shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20">
+                    <!-- Logo -->
+                    <a href="index.html" class="flex items-center gap-3">
+                        <img src="logo_usih.JPG" alt="USIH Logo"
+                            class="h-12 w-auto object-contain rounded-md bg-white" />
+                        <div class="flex flex-col">
+                            <span class="text-2xl font-black tracking-tighter text-text-main leading-none">USIH</span>
+                            <span class="text-[10px] uppercase tracking-widest text-secondary font-bold">Gabon</span>
+                        </div>
+                    </a>
+                    <!-- Desktop Navigation -->
+                    <nav class="hidden lg:flex items-center gap-8">
+                        <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                            href="index.html">Accueil</a>
+                        <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                            href="mission.html">Notre mission</a>
+                        <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                            href="filiere.html">Formations</a>
+                        <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                            href="admissions_scolarite.html">Admissions</a>
+                        <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                            href="contact.html">Contact</a>
+                    </nav>
+                    <!-- Actions -->
+                    <div class="flex items-center gap-4">
+                        <a class="inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-lg text-white bg-primary hover:bg-primary-dark shadow-lg shadow-primary/20 transition-all transform hover:-translate-y-0.5"
+                            href="pre-inscription.html">
+                            Candidater
+                        </a>
+                        <!-- Mobile menu button -->
+                        <button class="lg:hidden p-2 text-gray-600 hover:text-primary" id="mobile-menu-btn">
+                            <span class="material-symbols-outlined hover:scale-110 transition-transform">menu</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu (Hidden by default) -->
+            <div class="lg:hidden hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg"
+                id="mobile-menu">
+                <div class="px-4 pt-2 pb-6 space-y-1">
+                    <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                        href="index.html">Accueil</a>
+                    <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                        href="mission.html">Notre mission</a>
+                    <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                        href="filiere.html">Formations</a>
+                    <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                        href="admissions_scolarite.html">Admissions</a>
+                    <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                        href="contact.html">Contact</a>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1">
+            <!-- Hero Section -->
+            <section class="@container">
+                <div class="@[480px]:p-6 max-w-7xl mx-auto">
+                    <div class="flex min-h-[400px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-2xl items-center justify-center p-6 shadow-sm overflow-hidden relative"
+                        data-alt="University campus students studying outdoors"
+                        style='background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCHZ6SiPmp2gIl_Z2jnLKuTRbhp1X9BV4-hJygVtX_srlTJzeBnz86DDy9j4jjiFWnLytGqq9VJy-xsv_IAroOglqDY_t1_d8uMNft1SEgh0Zx95It7i6iqUq-Y-L_G37vyA-zAzq6X4or_4T2RSCJYl0a2p3aznFfz9H3BKPARYKv-tOLvyKpbl_wHf3hYdeYBEIiuYxI7t4yvS95iPwkdpCT7QyDAFsHOxAY4lcFtukb2FKsrJWu832smeFhhNp-NJ76EfdHXx4Y");'>
+                        <div class="absolute inset-0 bg-black/50"></div>
+                        <div class="relative z-10 flex flex-col gap-4 text-center max-w-3xl">
+                            <span
+                                class="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary border border-primary/30 text-xs font-bold uppercase tracking-wider backdrop-blur-sm self-center">Rentrée
+                                2024-2025</span>
+                            <h1
+                                class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl lg:text-6xl drop-shadow-md">
+                                Admissions et Frais de Scolarité
+                            </h1>
+                            <p class="text-slate-100 text-base font-medium leading-relaxed @[480px]:text-lg opacity-90">
+                                Rejoignez l'élite de l'ingénierie et des sciences au Gabon. Une formation d'excellence
+                                accessible, transparente et structurée pour votre réussite.
+                            </p>
+                        </div>
+                        <div class="relative z-10 flex flex-wrap gap-3 justify-center w-full">
+                            <a href="#"
+                                class="flex min-w-[140px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-primary-dark transition-all text-slate-900 text-base font-bold shadow-lg shadow-primary/20 transform hover:-translate-y-0.5">
+                                <span class="material-symbols-outlined mr-2 text-[20px]">download</span>
+                                <span>Brochure</span>
+                            </a>
+                            <a href="contact.html"
+                                class="flex min-w-[140px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-white hover:bg-slate-100 transition-all text-slate-900 text-base font-bold shadow-lg transform hover:-translate-y-0.5">
+                                <span class="material-symbols-outlined mr-2 text-[20px]">edit_document</span>
+                                <span>Déposer un dossier</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="max-w-7xl mx-auto px-4 lg:px-8 py-12 flex flex-col gap-16">
+                <!-- Admission Process -->
+                <section>
+                    <div class="mb-10 text-center md:text-left">
+                        <h2 class="text-slate-900 dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em]">
+                            Procédure d'Admission</h2>
+                        <p class="text-slate-500 dark:text-slate-400 mt-2">Votre parcours vers l'excellence en 4 étapes
+                            simples.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                        <!-- Step 1 -->
+                        <div
+                            class="group relative flex flex-col gap-4 p-6 rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-800 hover:border-primary/50 dark:hover:border-primary/50 transition-all shadow-sm hover:shadow-md">
+                            <div
+                                class="absolute -top-3 -right-3 size-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 font-bold border border-slate-200 dark:border-slate-700">
+                                1</div>
+                            <div
+                                class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-slate-900 transition-colors">
+                                <span class="material-symbols-outlined text-3xl">folder_open</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Dépôt de dossier</h3>
+                                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Soumission de
+                                    votre candidature en ligne ou directement au campus de Libreville.</p>
+                            </div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div
+                            class="group relative flex flex-col gap-4 p-6 rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-800 hover:border-primary/50 dark:hover:border-primary/50 transition-all shadow-sm hover:shadow-md">
+                            <div
+                                class="absolute -top-3 -right-3 size-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 font-bold border border-slate-200 dark:border-slate-700">
+                                2</div>
+                            <div
+                                class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-slate-900 transition-colors">
+                                <span class="material-symbols-outlined text-3xl">payments</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Frais de dossier</h3>
+                                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Règlement de 25
+                                    000 FCFA pour l'ouverture et le traitement de votre dossier (Non remboursable).</p>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div
+                            class="group relative flex flex-col gap-4 p-6 rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-800 hover:border-primary/50 dark:hover:border-primary/50 transition-all shadow-sm hover:shadow-md">
+                            <div
+                                class="absolute -top-3 -right-3 size-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 font-bold border border-slate-200 dark:border-slate-700">
+                                3</div>
+                            <div
+                                class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-slate-900 transition-colors">
+                                <span class="material-symbols-outlined text-3xl">assignment_turned_in</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Étude du dossier</h3>
+                                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Commission
+                                    d'évaluation académique pour valider votre admissibilité selon vos résultats.</p>
+                            </div>
+                        </div>
+                        <!-- Step 4 -->
+                        <div
+                            class="group relative flex flex-col gap-4 p-6 rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-800 hover:border-primary/50 dark:hover:border-primary/50 transition-all shadow-sm hover:shadow-md">
+                            <div
+                                class="absolute -top-3 -right-3 size-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 font-bold border border-slate-200 dark:border-slate-700">
+                                4</div>
+                            <div
+                                class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-slate-900 transition-colors">
+                                <span class="material-symbols-outlined text-3xl">verified</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Confirmation</h3>
+                                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Paiement des frais
+                                    d'inscription pour sécuriser définitivement votre place.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Pricing Section -->
+                <section class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                    <!-- Main Tuition Table -->
+                    <div class="lg:col-span-2 flex flex-col gap-6">
+                        <div>
+                            <h2
+                                class="text-slate-900 dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em]">
+                                Grille des Frais de Scolarité</h2>
+                            <p class="text-slate-500 dark:text-slate-400 mt-2">Investissez dans votre avenir avec une
+                                structure de coûts transparente.</p>
+                        </div>
+                        <div
+                            class="rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-surface-light dark:bg-surface-dark shadow-sm">
+                            <!-- Header Row -->
+                            <div
+                                class="grid grid-cols-2 md:grid-cols-3 bg-slate-50 dark:bg-slate-800/50 p-4 border-b border-slate-200 dark:border-slate-700 font-bold text-slate-700 dark:text-slate-200">
+                                <div class="col-span-1 md:col-span-2">Niveau d'étude</div>
+                                <div class="col-span-1 text-right">Montant Annuel</div>
+                            </div>
+                            <!-- Rows -->
+                            <div class="divide-y divide-slate-100 dark:divide-slate-700/50">
+                                <div
+                                    class="grid grid-cols-2 md:grid-cols-3 p-4 hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors items-center">
+                                    <div class="col-span-1 md:col-span-2">
+                                        <div class="font-bold text-slate-900 dark:text-white">Frais d'inscription</div>
+                                        <div class="text-xs text-slate-500 dark:text-slate-400">Paiement unique à
+                                            l'entrée</div>
+                                    </div>
+                                    <div class="col-span-1 text-right font-bold text-slate-900 dark:text-white">100 000
+                                        FCFA</div>
+                                </div>
+                                <div
+                                    class="grid grid-cols-2 md:grid-cols-3 p-4 hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors items-center border-l-4 border-l-transparent hover:border-l-primary">
+                                    <div class="col-span-1 md:col-span-2">
+                                        <div class="font-bold text-slate-900 dark:text-white">Année Préparatoire</div>
+                                        <div class="text-xs text-slate-500 dark:text-slate-400">Mise à niveau
+                                            scientifique</div>
+                                    </div>
+                                    <div class="col-span-1 text-right font-bold text-primary">900 000 FCFA</div>
+                                </div>
+                                <div
+                                    class="grid grid-cols-2 md:grid-cols-3 p-4 hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors items-center border-l-4 border-l-transparent hover:border-l-primary">
+                                    <div class="col-span-1 md:col-span-2">
+                                        <div class="font-bold text-slate-900 dark:text-white">Licence 1</div>
+                                        <div class="text-xs text-slate-500 dark:text-slate-400">Tronc commun ingénierie
+                                        </div>
+                                    </div>
+                                    <div class="col-span-1 text-right font-bold text-primary">1 000 000 FCFA</div>
+                                </div>
+                                <div
+                                    class="grid grid-cols-2 md:grid-cols-3 p-4 hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors items-center border-l-4 border-l-transparent hover:border-l-primary">
+                                    <div class="col-span-1 md:col-span-2">
+                                        <div class="font-bold text-slate-900 dark:text-white">Licence 2</div>
+                                        <div class="text-xs text-slate-500 dark:text-slate-400">Spécialisation
+                                            progressive</div>
+                                    </div>
+                                    <div class="col-span-1 text-right font-bold text-primary">1 100 000 FCFA</div>
+                                </div>
+                                <div
+                                    class="grid grid-cols-2 md:grid-cols-3 p-4 hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors items-center border-l-4 border-l-transparent hover:border-l-primary">
+                                    <div class="col-span-1 md:col-span-2">
+                                        <div class="font-bold text-slate-900 dark:text-white">Licence 3</div>
+                                        <div class="text-xs text-slate-500 dark:text-slate-400">Année de diplôme</div>
+                                    </div>
+                                    <div class="col-span-1 text-right font-bold text-primary">1 300 000 FCFA</div>
+                                </div>
+                                <div
+                                    class="grid grid-cols-2 md:grid-cols-3 p-4 bg-slate-50/50 dark:bg-slate-800/20 hover:bg-slate-100 dark:hover:bg-slate-800/40 transition-colors items-center border-l-4 border-l-transparent hover:border-l-primary">
+                                    <div class="col-span-1 md:col-span-2">
+                                        <div class="font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                                            Master 1 &amp; 2
+                                            <span
+                                                class="px-2 py-0.5 rounded text-[10px] font-bold bg-primary text-slate-900">Expert</span>
+                                        </div>
+                                        <div class="text-xs text-slate-500 dark:text-slate-400">Cycle ingénieur complet
+                                        </div>
+                                    </div>
+                                    <div class="col-span-1 text-right font-bold text-primary text-lg">1 500 000 FCFA
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Payment Plan Alert -->
+                        <div
+                            class="rounded-xl bg-background-dark text-white p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start shadow-lg relative overflow-hidden group">
+                            <div
+                                class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                                <span class="material-symbols-outlined text-[150px]">gavel</span>
+                            </div>
+                            <div class="z-10 bg-primary/20 p-3 rounded-lg text-primary shrink-0">
+                                <span class="material-symbols-outlined text-3xl">account_balance_wallet</span>
+                            </div>
+                            <div class="z-10 flex-1">
+                                <h3 class="text-xl font-bold mb-2 text-primary">Plan de Paiement USIH – GABON</h3>
+                                <p class="text-slate-300 mb-4 text-sm leading-relaxed">
+                                    Pour garantir le bon fonctionnement académique, l'USIH applique une politique
+                                    financière stricte.
+                                </p>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start gap-3">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+                                        <span class="text-sm font-medium"><strong class="text-white">50% de la
+                                                scolarité</strong> doit être réglé avant le début des cours.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="material-symbols-outlined text-red-400 text-sm mt-1">cancel</span>
+                                        <span class="text-sm font-medium text-slate-300">Les versements effectués sont
+                                            <strong class="text-white underline decoration-red-400 decoration-2">non
+                                                remboursables</strong>.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sidebar: Supplements & Contact -->
+                    <div class="lg:col-span-1 flex flex-col gap-6">
+                        <!-- Supplements -->
+                        <div
+                            class="bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 rounded-xl p-6 shadow-sm">
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">shopping_bag</span>
+                                Frais Annexes &amp; Matériel
+                            </h3>
+                            <div class="space-y-4">
+                                <!-- Item 1 -->
+                                <div
+                                    class="flex items-start justify-between pb-4 border-b border-slate-100 dark:border-slate-800">
+                                    <div>
+                                        <p class="font-semibold text-slate-800 dark:text-slate-200 text-sm">Polos USIH
+                                        </p>
+                                        <p class="text-xs text-red-500 font-medium">Obligatoire</p>
+                                    </div>
+                                    <p class="font-bold text-slate-900 dark:text-white">15 000 FCFA</p>
+                                </div>
+                                <!-- Item 2 -->
+                                <div
+                                    class="flex items-start justify-between pb-4 border-b border-slate-100 dark:border-slate-800">
+                                    <div>
+                                        <p class="font-semibold text-slate-800 dark:text-slate-200 text-sm">Manuels
+                                            d'exercice</p>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400">Support pédagogique</p>
+                                    </div>
+                                    <p class="font-bold text-slate-900 dark:text-white">10 000 FCFA</p>
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="flex items-start justify-between">
+                                    <div>
+                                        <p class="font-semibold text-slate-800 dark:text-slate-200 text-sm">Kit
+                                            Scolaire</p>
+                                    </div>
+                                    <p class="font-bold text-slate-900 dark:text-white">30 000 FCFA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Contact Card -->
+                        <div class="bg-primary/5 dark:bg-primary/5 border border-primary/20 rounded-xl p-6 text-center">
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Service Admissions</h3>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 mb-6">Besoin d'aide pour votre
+                                inscription ou des questions sur le paiement ?</p>
+                            <div class="flex flex-col gap-3">
+                                <a class="flex items-center justify-center gap-2 bg-white dark:bg-surface-dark py-3 px-4 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 hover:border-primary text-sm font-semibold text-slate-900 dark:text-white transition-colors"
+                                    href="mailto:admissions@usih.fr">
+                                    <span class="material-symbols-outlined text-primary">mail</span>
+                                    admissions@usih.fr
+                                </a>
+                                <a class="flex items-center justify-center gap-2 bg-white dark:bg-surface-dark py-3 px-4 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 hover:border-primary text-sm font-semibold text-slate-900 dark:text-white transition-colors"
+                                    href="tel:+241 077 82 82 77">
+                                    <span class="material-symbols-outlined text-primary">call</span>
+                                    +241 077 82 82 77
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Download CTA Mini -->
+                        <div
+                            class="bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 rounded-xl p-6 shadow-sm flex flex-col items-center text-center gap-3">
+                            <div
+                                class="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center mb-1">
+                                <span class="material-symbols-outlined text-slate-500">description</span>
+                            </div>
+                            <p class="text-xs text-slate-500 font-medium">Téléchargez le guide complet en PDF pour
+                                consulter hors ligne.</p>
+                            <button class="text-primary text-sm font-bold hover:underline">Télécharger le PDF</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer class="bg-background-dark text-white border-t border-gray-800 pt-16 pb-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                    <!-- Column 1: Brand -->
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-3">
+                            <img src="logo_usih.JPG" alt="USIH Logo"
+                                class="h-10 w-auto object-contain rounded-md bg-white" />
+                            <div class="flex flex-col">
+                                <span class="text-xl font-black tracking-tighter text-white leading-none">USIH</span>
+                                <span
+                                    class="text-[10px] uppercase tracking-widest text-secondary font-bold">Gabon</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            L'Université des Sciences et Ingénieries Hashem s'engage à former les leaders technologiques
+                            de
+                            demain avec rigueur et passion.
+                        </p>
+                        <div class="flex gap-4">
+                            <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors"
+                                href="#">
+                                <span class="text-lg font-bold">f</span>
+                            </a>
+                            <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors"
+                                href="#">
+                                <span class="text-lg font-bold">in</span>
+                            </a>
+                            <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors"
+                                href="#">
+                                <span class="text-lg font-bold">x</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Column 2: Navigation -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-6 text-white border-b border-primary/30 inline-block pb-2">
+                            Navigation Rapide</h4>
+                        <ul class="space-y-4 text-gray-400 text-sm">
+                            <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                    href="index.html"><span
+                                        class="material-symbols-outlined text-xs">chevron_right</span>Accueil</a></li>
+                            <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                    href="mission.html"><span
+                                        class="material-symbols-outlined text-xs">chevron_right</span>À propos</a></li>
+                            <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                    href="filiere.html"><span
+                                        class="material-symbols-outlined text-xs">chevron_right</span>Formations</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                    href="admissions_scolarite.html"><span
+                                        class="material-symbols-outlined text-xs">chevron_right</span>Admissions</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                    href="mission.html"><span
+                                        class="material-symbols-outlined text-xs">chevron_right</span>Campus &amp;
+                                    Vie</a></li>
+                        </ul>
+                    </div>
+                    <!-- Column 3: Contact -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-6 text-white border-b border-primary/30 inline-block pb-2">
+                            Contact</h4>
+                        <ul class="space-y-4 text-gray-400 text-sm">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-0.5">location_on</span>
+                                <span>Libreville, Charbonnages<br />Gabon</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary">phone</span>
+                                <a href="tel:+241 077 82 82 77" class="hover:text-primary transition-colors">+241 077 82
+                                    82
+                                    77</a>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary">mail</span>
+                                <a href="mailto:Contact@usih.fr"
+                                    class="hover:text-primary transition-colors">Contact@usih.fr</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Column 4: Légal -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-6 text-white border-b border-primary/30 inline-block pb-2">Légal
+                        </h4>
+                        <ul class="space-y-4 text-gray-400 text-sm">
+                            <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                        class="material-symbols-outlined text-xs">chevron_right</span>Mentions
+                                    légales</a></li>
+                            <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                        class="material-symbols-outlined text-xs">chevron_right</span>Politique de
+                                    confidentialité</a></li>
+                            <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                        class="material-symbols-outlined text-xs">chevron_right</span>Accessibilité</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                    href="contact.html"><span
+                                        class="material-symbols-outlined text-xs">chevron_right</span>FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Bottom -->
+                <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-gray-500 text-sm text-center md:text-left">
+                        &copy; 2026 Université des Sciences et Ingénieries Hashem. Tous droits réservés.
+                    </p>
+                    <div class="flex items-center gap-2">
+                        <span class="text-gray-500 text-sm">Développé avec excellence au Gabon</span>
+                        <span class="material-symbols-outlined text-primary text-sm">favorite</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            // Ensure menu mobile script is only added once
+            if (!window.mobileMenuInitialized) {
+                document.addEventListener('DOMContentLoaded', () => {
+                    const btn = document.getElementById('mobile-menu-btn');
+                    const menu = document.getElementById('mobile-menu');
+                    if (btn && menu) {
+                        btn.addEventListener('click', () => {
+                            menu.classList.toggle('hidden');
+                        });
+                    }
+                });
+                window.mobileMenuInitialized = true;
+            }
+        </script>
+    </div>
+</body>
+
+</html>

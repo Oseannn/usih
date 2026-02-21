@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>USIH - Nos Filières d'Ingénierie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#b82e3b",
+                        "primary-dark": "#9a2531",
+                        "accent-gold": "#f3b552",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#112120",
+                        "neutral-slate": "#475569",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-display">
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 w-full bg-white border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="logo_usih.JPG" alt="USIH Logo" class="h-12 w-auto object-contain rounded-md bg-white" />
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-black tracking-tighter text-text-main leading-none">USIH</span>
+                        <span class="text-[10px] uppercase tracking-widest text-secondary font-bold">Gabon</span>
+                    </div>
+                </a>
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                        href="index.html">Accueil</a>
+                    <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                        href="mission.html">Notre mission</a>
+                    <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                        href="filiere.html">Formations</a>
+                    <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                        href="admissions_scolarite.html">Admissions</a>
+                    <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                        href="contact.html">Contact</a>
+                </nav>
+                <!-- Actions -->
+                <div class="flex items-center gap-4">
+                    <a class="inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-lg text-white bg-primary hover:bg-primary-dark shadow-lg shadow-primary/20 transition-all transform hover:-translate-y-0.5"
+                        href="pre-inscription.html">
+                        Candidater
+                    </a>
+                    <!-- Mobile menu button -->
+                    <button class="lg:hidden p-2 text-gray-600 hover:text-primary" id="mobile-menu-btn">
+                        <span class="material-symbols-outlined hover:scale-110 transition-transform">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="lg:hidden hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg"
+            id="mobile-menu">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                    href="index.html">Accueil</a>
+                <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                    href="mission.html">Notre mission</a>
+                <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                    href="filiere.html">Formations</a>
+                <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                    href="admissions_scolarite.html">Admissions</a>
+                <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                    href="contact.html">Contact</a>
+            </div>
+        </div>
+    </header>
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative bg-slate-900 py-20 lg:py-32 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-slate-900/80 z-10">
+                </div>
+                <div class="h-full w-full bg-cover bg-center"
+                    data-alt="Etudiants en ingénierie travaillant sur un projet technique"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAFruxokTEdlE-Jq2kUyvlpdHrVDu-RXodCIRyWbUHU1oOe16PbaI6DACRJ5vvBlnBhv3lD8xrmNeyh9juh5WeFWoJbKY9uOLI5_KiphDt3Jlf2aLHHW0LPZfDNHFrAPysx_rkVubu-mf5HtzpswgBkjLJAehwaPVIhAFE8axXESl06pg7vguHYuysTAGJJMDHU7_nCpDVGQ3IiXut8ummjrCUAAg4D3MxJiODY-gn5CGUiI2WowleucaKr1eWpC23fRyS5WrO6R2c');">
+                </div>
+            </div>
+            <div class="relative z-20 max-w-[1280px] mx-auto px-4 sm:px-10">
+                <div class="max-w-3xl">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-gold/20 border border-accent-gold/40 text-accent-gold text-xs font-bold uppercase tracking-wider mb-6">
+                        <span class="w-2 h-2 rounded-full bg-accent-gold"></span>
+                        Excellence Académique
+                    </div>
+                    <h1 class="text-white text-4xl lg:text-6xl font-black leading-tight tracking-tight mb-6">
+                        Nos Filières <span class="text-primary">d'Ingénierie</span>
+                    </h1>
+                    <p
+                        class="text-slate-300 text-lg lg:text-xl leading-relaxed mb-8 max-w-2xl border-l-4 border-primary pl-6">
+                        Découvrez nos 7 pôles d'expertise conçus pour former l'élite technologique de demain au Gabon et
+                        en Afrique Centrale.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="pre-inscription.html"
+                            class="bg-primary hover:bg-primary-dark text-[#111817] text-base font-bold rounded-lg h-12 px-8 transition-colors shadow-lg hover:shadow-primary/50 flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined">download</span>
+                            Télécharger la brochure
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Programs Grid -->
+        <section class="py-16 lg:py-24 bg-white dark:bg-[#112120]">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-10">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                    <div>
+                        <h2 class="text-slate-900 dark:text-white text-3xl font-bold tracking-tight mb-3">Découvrez nos
+                            formations</h2>
+                        <div class="h-1 w-20 bg-accent-gold rounded-full"></div>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 max-w-md text-sm md:text-right">
+                        Des cursus innovants alliant théorie rigoureuse et pratique sur le terrain, encadrés par des
+                        experts internationaux.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1: Génie Civil -->
+                    <div
+                        class="group bg-background-light dark:bg-slate-800/50 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 flex flex-col h-full">
+                        <div class="h-48 overflow-hidden relative">
+                            <div
+                                class="absolute inset-0 bg-slate-900/30 group-hover:bg-slate-900/10 transition-colors z-10">
+                            </div>
+                            <div class="w-full h-full bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700"
+                                data-alt="Chantier de construction moderne avec grues"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuABvTHSrJ-sNhFs3aGvY53qWSKwx3hV709FulvULMZaJ1uj75eO9f4ChkgqG5dRENNq9CIK-pytL5LVPynnVmHGCTNtxM72nTiR0JontMW3RGu40ucNZrsKr-I_wfDzz_l5_bgB8MzS58WQFFPV6xIxp9q2b3GMpP_cNtEC8vA4UD48JOTBp87XAzio2OxIis6BhitUALi8p8jeLynxg3OMw7LR5OkpyaZ0RJFPUdQAQ0dU09nYVo7ovfhdN8bBFgUEJwkzS_tUYBE');">
+                            </div>
+                            <div
+                                class="absolute top-4 right-4 z-20 bg-white dark:bg-slate-800 p-2 rounded-lg shadow-md">
+                                <span class="material-symbols-outlined text-accent-gold text-2xl">architecture</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3
+                                class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors">
+                                Génie Civil</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm mb-6 flex-grow">
+                                Conception et réalisation d'infrastructures durables. Maîtrisez les défis de la
+                                construction urbaine, des ponts aux gratte-ciels, en intégrant les normes
+                                environnementales.
+                            </p>
+
+                        </div>
+                    </div>
+                    <!-- Card 2: Génie Électromécanique -->
+                    <div
+                        class="group bg-background-light dark:bg-slate-800/50 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 flex flex-col h-full">
+                        <div class="h-48 overflow-hidden relative">
+                            <div
+                                class="absolute inset-0 bg-slate-900/30 group-hover:bg-slate-900/10 transition-colors z-10">
+                            </div>
+                            <div class="w-full h-full bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700"
+                                data-alt="Technicien travaillant sur un moteur industriel complexe"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAdoleD2Gm25UggFpRWxESf7BqKFqT3CoDqzutdX9OpMvWnBhpMr_ZfbsnknKB0kx-8Y4F_bU078boQPPPoZ2bvhH2kSmQsV0FH3tAicRoy4-FCrZ33TOo1aT54ZLf_VjbGWf1a-mlkczWzOvfPsOkCq_yWvZv2Yw812QkT3PGxATPR_BXkcVzhW0vwsHJhwhfvkdMZsGHA0gW8YMdBdY5gGMFAqKEmsVZXAvptik0gEiyE4ekqKctTGobwNAmo5eBpy4ZJH39oei0');">
+                            </div>
+                            <div
+                                class="absolute top-4 right-4 z-20 bg-white dark:bg-slate-800 p-2 rounded-lg shadow-md">
+                                <span class="material-symbols-outlined text-accent-gold text-2xl">settings_power</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3
+                                class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors">
+                                Génie Électromécanique</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm mb-6 flex-grow">
+                                Synergie entre mécanique, électronique et automatique. Formez-vous à la maintenance
+                                industrielle, à la robotique et aux systèmes énergétiques complexes.
+                            </p>
+
+                        </div>
+                    </div>
+                    <!-- Card 3: Génie Numérique -->
+                    <div
+                        class="group bg-background-light dark:bg-slate-800/50 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 flex flex-col h-full">
+                        <div class="h-48 overflow-hidden relative">
+                            <div
+                                class="absolute inset-0 bg-slate-900/30 group-hover:bg-slate-900/10 transition-colors z-10">
+                            </div>
+                            <div class="w-full h-full bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700"
+                                data-alt="Code informatique sur un écran avec effet matrix"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCmcmZ2zgaPAQVB5051xHKvIhXY9zbhZpi20xqn6BCRtUoZT_A9jgBpEqN1hu0UlKv32uEmLQV_FWUKv3Cps5xum82F-dv6vzhK1SyLqaZ54mIaf1TLMJ8BznxfbuVMSOO0pP3VKG-UUcexnsnU2k1FCAAa22T3alLGECvius38byY_JxCto4-TrQyVUDVYFDn-vzBjQeZ0s8SahOX_gQ4C460bpC_jyfZfT33P1Ub5hz3-ipmcXfElMprq7gjCuYWsAoICRHF2Drs');">
+                            </div>
+                            <div
+                                class="absolute top-4 right-4 z-20 bg-white dark:bg-slate-800 p-2 rounded-lg shadow-md">
+                                <span class="material-symbols-outlined text-accent-gold text-2xl">terminal</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3
+                                class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors">
+                                Génie Numérique</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm mb-6 flex-grow">
+                                Au cœur de la transformation digitale. Développement logiciel, cybersécurité, Big Data
+                                et Intelligence Artificielle pour les défis technologiques actuels.
+                            </p>
+
+                        </div>
+                    </div>
+                    <!-- Card 4: Génie Physique-Chimie -->
+                    <div
+                        class="group bg-background-light dark:bg-slate-800/50 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 flex flex-col h-full">
+                        <div class="h-48 overflow-hidden relative">
+                            <div
+                                class="absolute inset-0 bg-slate-900/30 group-hover:bg-slate-900/10 transition-colors z-10">
+                            </div>
+                            <div class="w-full h-full bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700"
+                                data-alt="Laboratoire de chimie avec verrerie et liquides colorés"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCfZzF4QXu7yuiPKeSrz2_PX39o2No1epekJfI-CuJN8yL-zMQHC4ZSx85NndV0t5M4gPFB6y8nJBdnbkf1Emc2Q1gfBGox1kUFg06XgT8TQ6QunzkeVzUGMHHTuhZx9ogHy_XE18IAdkqEAzkVu_QV9CIbRapswNjJ4uizTvGGV1cvyVXVvM3FREqBbViI8FFR-6u9AqtAEw38-tWmrM1rZOne716W1616yzsYGCJwXFycJMna2Eum_KNoFHVN404hHqeEj2Qtev0');">
+                            </div>
+                            <div
+                                class="absolute top-4 right-4 z-20 bg-white dark:bg-slate-800 p-2 rounded-lg shadow-md">
+                                <span class="material-symbols-outlined text-accent-gold text-2xl">science</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3
+                                class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors">
+                                Génie Physique-Chimie</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm mb-6 flex-grow">
+                                Innovation des matériaux et procédés industriels. De la pétrochimie aux
+                                nanotechnologies, maîtrisez la transformation de la matière à l'échelle industrielle.
+                            </p>
+
+                        </div>
+                    </div>
+                    <!-- Card 5: Génie Agricole -->
+                    <div
+                        class="group bg-background-light dark:bg-slate-800/50 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 flex flex-col h-full">
+                        <div class="h-48 overflow-hidden relative">
+                            <div
+                                class="absolute inset-0 bg-slate-900/30 group-hover:bg-slate-900/10 transition-colors z-10">
+                            </div>
+                            <div class="w-full h-full bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700"
+                                data-alt="Drone survolant un champ agricole moderne"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDy6D8k4WiFtHhUQdPGmscMr_Ww9yEdnaaPLY7YHEonIp3sydf3XLfFGOqWzSEW9Q9FR03VwkvQAJBamKyP5cp5WebB-9cJCB-OPDKThq1XJUUNL6yO5uivLE_Dwd6i3s0ChYMATBM7PhyJcOQALXvberrT1Ujv_qQMW-BGhh8u5O9WbfCLffUg7NSsy8lfKIsfSGO5FhxL9plvS1SX1IgvgbV8fGuGrGy1pRGP2zq3XWOoiZJJuUVnJlZfGLohgntWlCsSLUl0Nao');">
+                            </div>
+                            <div
+                                class="absolute top-4 right-4 z-20 bg-white dark:bg-slate-800 p-2 rounded-lg shadow-md">
+                                <span class="material-symbols-outlined text-accent-gold text-2xl">agriculture</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3
+                                class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors">
+                                Génie Agricole</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm mb-6 flex-grow">
+                                Modernisation de l'agriculture gabonaise. Techniques d'irrigation, machinisme agricole
+                                et agro-industrie pour une sécurité alimentaire durable.
+                            </p>
+
+                        </div>
+                    </div>
+                    <!-- Card 6: Gestion de la Biodiversité -->
+                    <div
+                        class="group bg-background-light dark:bg-slate-800/50 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 flex flex-col h-full">
+                        <div class="h-48 overflow-hidden relative">
+                            <div
+                                class="absolute inset-0 bg-slate-900/30 group-hover:bg-slate-900/10 transition-colors z-10">
+                            </div>
+                            <div class="w-full h-full bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700"
+                                data-alt="Forêt tropicale dense vue du ciel"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhEUSFN6JsVUMY7vMZfERinZzMae-mfntGWXiqskLYJD1jKcq_b6oE_BFUzRZxXVraHTQZaZY3AWjaIjLaaO7UqXUMAG4k-d8F4pUs2swEHzyuR6S9Qa3wdRQUPF7FgxnhJWSn9KFbDqLYgZjpStTZFxEVxYZ677FPFgb6hvCuw76xVC8DbRiQAEXmR1io4haD-32AWxXVZlIMTIDzC3qYLRyWiRtJMkzL4NnUyXig6xvvn3LU_YFFrFTa-BDl69XjWxYprrN6kU4');">
+                            </div>
+                            <div
+                                class="absolute top-4 right-4 z-20 bg-white dark:bg-slate-800 p-2 rounded-lg shadow-md">
+                                <span class="material-symbols-outlined text-accent-gold text-2xl">forest</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3
+                                class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors">
+                                Gestion &amp; Conservation de la Biodiversité</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm mb-6 flex-grow">
+                                Protection du patrimoine naturel. Stratégies de conservation, gestion des parcs
+                                nationaux et valorisation des écosystèmes tropicaux.
+                            </p>
+
+                        </div>
+                    </div>
+                    <!-- Card 7: Sciences Environnementales -->
+                    <div
+                        class="group bg-background-light dark:bg-slate-800/50 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 flex flex-col h-full lg:col-span-3 lg:w-1/3 lg:mx-auto">
+                        <div class="h-48 overflow-hidden relative">
+                            <div
+                                class="absolute inset-0 bg-slate-900/30 group-hover:bg-slate-900/10 transition-colors z-10">
+                            </div>
+                            <div class="w-full h-full bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700"
+                                data-alt="Paysage de montagnes vertes et brumeuses"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCuamHyr7gZHBJqZ30dccXlNottXv1bMDk6fJyAgN6xF2fRcpsqNHYhtqMifHn1Erjo215Cre8CJhoYJuu_H2iLZxzD70782s5MlgZuIusryQSd2zRJYOqn-PX2JycTXu0PB_PkrblrA7b8od3UyY7XMtBui3vvYrGExg7ZYNz953UIJx8vb95d4hx4s8FvEEibK-MJHgzJTvBLwbVIKOw-qGXlVk4UtUip8ykaR4ZKdeTH_oLHLdPovIm-wKcERFszBNVuaTIwsXI');">
+                            </div>
+                            <div
+                                class="absolute top-4 right-4 z-20 bg-white dark:bg-slate-800 p-2 rounded-lg shadow-md">
+                                <span class="material-symbols-outlined text-accent-gold text-2xl">eco</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3
+                                class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors">
+                                Sciences Environnementales</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm mb-6 flex-grow">
+                                Pour un développement responsable. Étude d'impacts, gestion des déchets, énergies
+                                renouvelables et politiques environnementales durables.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-background-light dark:bg-background-dark">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-10">
+                <div class="bg-[#112120] rounded-2xl p-8 md:p-16 text-center relative overflow-hidden shadow-2xl">
+                    <!-- Background decoration -->
+                    <div
+                        class="absolute top-0 left-0 w-64 h-64 bg-primary/20 rounded-full blur-[80px] -translate-x-1/2 -translate-y-1/2">
+                    </div>
+                    <div
+                        class="absolute bottom-0 right-0 w-64 h-64 bg-accent-gold/10 rounded-full blur-[80px] translate-x-1/2 translate-y-1/2">
+                    </div>
+                    <div class="relative z-10 max-w-2xl mx-auto">
+                        <div class="w-16 h-16 mx-auto bg-primary/20 rounded-full flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-primary text-3xl">school</span>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Prêt à construire l'avenir ?</h2>
+                        <p class="text-slate-300 text-lg mb-8">
+                            Rejoignez l'USIH et intégrez une communauté d'excellence. Les inscriptions pour la prochaine
+                            rentrée académique sont ouvertes.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="pre-inscription.html"
+                                class="flex items-center justify-center bg-primary hover:bg-primary-dark text-[#111817] text-base font-bold rounded-lg h-12 px-8 transition-colors shadow-lg">
+                                Candidater maintenant
+                            </a>
+                            <a href="contact.html"
+                                class="flex items-center justify-center bg-transparent border-2 border-slate-600 hover:border-white text-white text-base font-bold rounded-lg h-12 px-8 transition-colors">
+                                Contacter l'admission
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-background-dark text-white border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Column 1: Brand -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <img src="logo_usih.JPG" alt="USIH Logo"
+                            class="h-10 w-auto object-contain rounded-md bg-white" />
+                        <div class="flex flex-col">
+                            <span class="text-xl font-black tracking-tighter text-white leading-none">USIH</span>
+                            <span class="text-[10px] uppercase tracking-widest text-secondary font-bold">Gabon</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        L'Université des Sciences et Ingénieries Hashem s'engage à former les leaders technologiques de
+                        demain avec rigueur et passion.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors"
+                            href="#">
+                            <span class="text-lg font-bold">f</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors"
+                            href="#">
+                            <span class="text-lg font-bold">in</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors"
+                            href="#">
+                            <span class="text-lg font-bold">x</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Column 2: Navigation -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white border-b border-primary/30 inline-block pb-2">
+                        Navigation Rapide</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                href="index.html"><span
+                                    class="material-symbols-outlined text-xs">chevron_right</span>Accueil</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                href="mission.html"><span
+                                    class="material-symbols-outlined text-xs">chevron_right</span>À propos</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                href="filiere.html"><span
+                                    class="material-symbols-outlined text-xs">chevron_right</span>Formations</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                href="admissions_scolarite.html"><span
+                                    class="material-symbols-outlined text-xs">chevron_right</span>Admissions</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                href="mission.html"><span
+                                    class="material-symbols-outlined text-xs">chevron_right</span>Campus &amp; Vie</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Column 3: Contact -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white border-b border-primary/30 inline-block pb-2">Contact
+                    </h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary mt-0.5">location_on</span>
+                            <span>Libreville, Charbonnages<br />Gabon</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">phone</span>
+                            <a href="tel:077828277" class="hover:text-primary transition-colors">077 82 82 77</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">mail</span>
+                            <a href="mailto:Contact@usih.fr"
+                                class="hover:text-primary transition-colors">Contact@usih.fr</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Column 4: Légal -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white border-b border-primary/30 inline-block pb-2">Légal
+                    </h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                    class="material-symbols-outlined text-xs">chevron_right</span>Mentions légales</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                    class="material-symbols-outlined text-xs">chevron_right</span>Politique de
+                                confidentialité</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                    class="material-symbols-outlined text-xs">chevron_right</span>Accessibilité</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                href="contact.html"><span
+                                    class="material-symbols-outlined text-xs">chevron_right</span>FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Bottom -->
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm text-center md:text-left">
+                    &copy; 2026 Université des Sciences et Ingénieries Hashem. Tous droits réservés.
+                </p>
+                <div class="flex items-center gap-2">
+                    <span class="text-gray-500 text-sm">Développé avec excellence au Gabon</span>
+                    <span class="material-symbols-outlined text-primary text-sm">favorite</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Ensure menu mobile script is only added once
+        if (!window.mobileMenuInitialized) {
+            document.addEventListener('DOMContentLoaded', () => {
+                const btn = document.getElementById('mobile-menu-btn');
+                const menu = document.getElementById('mobile-menu');
+                if (btn && menu) {
+                    btn.addEventListener('click', () => {
+                        menu.classList.toggle('hidden');
+                    });
+                }
+            });
+            window.mobileMenuInitialized = true;
+        }
+    </script>
+</body>
+
+</html>

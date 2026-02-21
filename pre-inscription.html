@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>USIH | Portail de Pré-inscription</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#b82e3b",
+                        "primary-dark": "#9a2531",
+                        "secondary": "#f3b552",
+                        "accent": "#46aac2",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#112120",
+                        "text-main": "#111817",
+                        "text-light": "#638886"
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+    <!-- Header / Nav -->
+    <header class="sticky top-0 z-50 w-full bg-white border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="logo_usih.JPG" alt="USIH Logo" class="h-12 w-auto object-contain rounded-md bg-white" />
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-black tracking-tighter text-text-main leading-none">USIH</span>
+                        <span class="text-[10px] uppercase tracking-widest text-secondary font-bold">Gabon</span>
+                    </div>
+                </a>
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                        href="index.html">Accueil</a>
+                    <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                        href="mission.html">Notre mission</a>
+                    <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                        href="filiere.html">Formations</a>
+                    <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                        href="admissions_scolarite.html">Admissions</a>
+                    <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                        href="contact.html">Contact</a>
+                </nav>
+                <!-- Actions -->
+                <div class="flex items-center gap-4">
+                    <a class="inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-lg text-white bg-primary hover:bg-primary-dark shadow-lg shadow-primary/20 transition-all transform hover:-translate-y-0.5"
+                        href="pre-inscription.html">
+                        Candidater
+                    </a>
+                    <!-- Mobile menu button -->
+                    <button class="lg:hidden p-2 text-gray-600 hover:text-primary" id="mobile-menu-btn">
+                        <span class="material-symbols-outlined hover:scale-110 transition-transform">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="lg:hidden hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg"
+            id="mobile-menu">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                    href="index.html">Accueil</a>
+                <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                    href="mission.html">Notre mission</a>
+                <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                    href="filiere.html">Formations</a>
+                <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                    href="admissions_scolarite.html">Admissions</a>
+                <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                    href="contact.html">Contact</a>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content -->
+    <main class="flex-grow py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <!-- Left Column: Form & Progress -->
+            <div class="lg:col-span-8 flex flex-col gap-6">
+                <!-- Title Section -->
+                <div
+                    class="bg-white dark:bg-[#1a2c2b] p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800">
+                    <h2 class="text-2xl sm:text-3xl font-black text-secondary dark:text-white tracking-tight mb-2">
+                        Pré-inscription en ligne</h2>
+                    <p class="text-slate-500 dark:text-slate-400">Année académique 2024-2025 • Licence &amp; Master</p>
+                </div>
+
+                <!-- Progress Stepper -->
+                <div
+                    class="bg-white dark:bg-[#1a2c2b] p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 overflow-x-auto">
+                    <div class="flex items-center justify-between min-w-[600px]" id="stepper">
+                        <!-- Step 1 -->
+                        <div class="stepper-item flex flex-col items-center gap-2 relative z-10 w-32" data-step="1"
+                            id="stepper-step-1">
+                            <div
+                                class="step-circle size-10 rounded-full bg-primary flex items-center justify-center text-white font-bold shadow-[0_0_0_4px_rgba(184,46,59,0.2)] transition-all">
+                                1</div>
+                            <span class="step-label text-xs font-bold text-primary text-center">Infos
+                                Personnelles</span>
+                        </div>
+                        <div class="flex-1 h-1 bg-slate-100 dark:bg-slate-700 mx-2 rounded relative">
+                            <div class="step-line absolute left-0 top-0 h-full w-1/2 bg-gradient-to-r from-primary to-primary transition-all duration-300 rounded"
+                                id="line-1"></div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="stepper-item flex flex-col items-center gap-2 relative z-10 w-32 opacity-60"
+                            data-step="2" id="stepper-step-2">
+                            <div
+                                class="step-circle size-8 rounded-full bg-slate-100 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 flex items-center justify-center text-slate-400 dark:text-slate-500 font-bold transition-all">
+                                2</div>
+                            <span
+                                class="step-label text-xs font-medium text-slate-500 dark:text-slate-400 text-center">Filière</span>
+                        </div>
+                        <div class="flex-1 h-1 bg-slate-100 dark:bg-slate-700 mx-2 rounded relative">
+                            <div class="step-line absolute left-0 top-0 h-full w-0 bg-gradient-to-r from-primary to-primary transition-all duration-300 rounded"
+                                id="line-2"></div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="stepper-item flex flex-col items-center gap-2 relative z-10 w-32 opacity-60"
+                            data-step="3" id="stepper-step-3">
+                            <div
+                                class="step-circle size-8 rounded-full bg-slate-100 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 flex items-center justify-center text-slate-400 dark:text-slate-500 font-bold transition-all">
+                                3</div>
+                            <span
+                                class="step-label text-xs font-medium text-slate-500 dark:text-slate-400 text-center">Documents</span>
+                        </div>
+                        <div class="flex-1 h-1 bg-slate-100 dark:bg-slate-700 mx-2 rounded relative">
+                            <div class="step-line absolute left-0 top-0 h-full w-0 bg-gradient-to-r from-primary to-primary transition-all duration-300 rounded"
+                                id="line-3"></div>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="stepper-item flex flex-col items-center gap-2 relative z-10 w-32 opacity-60"
+                            data-step="4" id="stepper-step-4">
+                            <div
+                                class="step-circle size-8 rounded-full bg-slate-100 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 flex items-center justify-center text-slate-400 dark:text-slate-500 font-bold transition-all">
+                                4</div>
+                            <span
+                                class="step-label text-xs font-medium text-slate-500 dark:text-slate-400 text-center">Récapitulatif</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notice Web3Forms Integration -->
+                <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 flex gap-3 text-sm text-blue-800 dark:text-blue-200 hidden"
+                    id="web3forms-notice">
+                    <span class="material-symbols-outlined text-blue-500 mt-0.5">info</span>
+                    <div>
+                        <strong>Remarque pour l'administrateur :</strong> Pour recevoir les emails, créez une clé
+                        Web3Forms via <a href="https://web3forms.com/" target="_blank"
+                            class="underline font-bold">web3forms.com</a> avec votre email
+                        <code>jmoussouami@icloud.com</code> et remplacez la valeur <code>YOUR_ACCESS_KEY_HERE</code>
+                        dans le code HTML. (Le formulaire est actuellement configuré pour la démonstration).
+                    </div>
+                </div>
+
+                <!-- Form Section -->
+                <form id="multi-step-form" class="flex flex-col gap-6" action="https://api.web3forms.com/submit"
+                    method="POST" enctype="multipart/form-data">
+
+                    <!-- Required Web3Forms Fields -->
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <input type="hidden" name="subject" value="Nouvelle Pré-inscription USIH">
+                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+                    <!-- Step 1: Infos Personnelles -->
+                    <div class="form-step active" data-step="1">
+                        <div
+                            class="bg-white dark:bg-[#1a2c2b] rounded-xl shadow-lg border border-slate-100 dark:border-slate-800 overflow-hidden">
+                            <div
+                                class="p-6 border-b border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/30 flex justify-between items-center">
+                                <h3 class="text-lg font-bold text-secondary dark:text-white flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary">person</span> Informations
+                                    Personnelles
+                                </h3>
+                                <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded font-bold">Étape
+                                    1/4</span>
+                            </div>
+                            <div class="p-6 sm:p-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <!-- Nom -->
+                                <div class="space-y-2">
+                                    <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Nom de
+                                        famille <span class="text-red-500">*</span></label>
+                                    <input required
+                                        class="w-full h-12 px-4 rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 focus:border-primary focus:ring-primary dark:text-white transition-all"
+                                        id="lastname" name="lastname" placeholder="Ex: MOUSSAVOU" type="text" />
+                                </div>
+                                <!-- Prénom -->
+                                <div class="space-y-2">
+                                    <label
+                                        class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Prénoms
+                                        <span class="text-red-500">*</span></label>
+                                    <input required
+                                        class="w-full h-12 px-4 rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 focus:border-primary focus:ring-primary dark:text-white transition-all"
+                                        id="firstname" name="firstname" placeholder="Ex: Jean-Luc" type="text" />
+                                </div>
+                                <!-- Date de naissance -->
+                                <div class="space-y-2">
+                                    <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Date
+                                        de naissance <span class="text-red-500">*</span></label>
+                                    <div class="relative">
+                                        <span
+                                            class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 material-symbols-outlined text-[20px]">calendar_month</span>
+                                        <input required
+                                            class="w-full h-12 pl-12 pr-4 rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 focus:border-primary focus:ring-primary dark:text-white transition-all text-slate-600 dark:text-slate-300"
+                                            id="dob" name="dob" type="date" />
+                                    </div>
+                                </div>
+                                <!-- Nationalité -->
+                                <div class="space-y-2">
+                                    <label
+                                        class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Nationalité
+                                        <span class="text-red-500">*</span></label>
+                                    <div class="relative">
+                                        <span
+                                            class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 material-symbols-outlined text-[20px]">public</span>
+                                        <select required
+                                            class="w-full h-12 pl-12 pr-4 rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 focus:border-primary focus:ring-primary dark:text-white transition-all text-slate-600 dark:text-slate-300 appearance-none"
+                                            id="nationality" name="nationality">
+                                            <option value="" disabled selected>Sélectionner votre pays</option>
+                                            <option value="Gabon">Gabon</option>
+                                            <option value="France">France</option>
+                                            <option value="Sénégal">Sénégal</option>
+                                            <option value="Côte d'Ivoire">Côte d'Ivoire</option>
+                                            <option value="Cameroun">Cameroun</option>
+                                        </select>
+                                        <span
+                                            class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 material-symbols-outlined text-[20px] pointer-events-none">expand_more</span>
+                                    </div>
+                                </div>
+                                <!-- Email -->
+                                <div class="space-y-2 md:col-span-2">
+                                    <label
+                                        class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Adresse
+                                        Email <span class="text-red-500">*</span></label>
+                                    <div class="relative">
+                                        <span
+                                            class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 material-symbols-outlined text-[20px]">mail</span>
+                                        <input required
+                                            class="w-full h-12 pl-12 pr-4 rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 focus:border-primary focus:ring-primary dark:text-white transition-all"
+                                            id="email" name="email" placeholder="etudiant@exemple.com" type="email" />
+                                    </div>
+                                </div>
+                                <!-- Téléphone -->
+                                <div class="space-y-2 md:col-span-2">
+                                    <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Numéro
+                                        de téléphone <span class="text-red-500">*</span></label>
+                                    <div class="relative flex gap-2">
+                                        <select name="phone_prefix"
+                                            class="h-12 w-24 rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 focus:border-primary focus:ring-primary dark:text-white text-sm font-medium">
+                                            <option value="+241">+241</option>
+                                            <option value="+33">+33</option>
+                                            <option value="+221">+221</option>
+                                        </select>
+                                        <input required
+                                            class="flex-1 h-12 px-4 rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 focus:border-primary focus:ring-primary dark:text-white transition-all"
+                                            id="phone" name="phone_number" placeholder="00 00 00 00" type="tel" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Filière -->
+                    <div class="form-step hidden" data-step="2">
+                        <div
+                            class="bg-white dark:bg-[#1a2c2b] rounded-xl shadow-lg border border-slate-100 dark:border-slate-800 overflow-hidden">
+                            <div
+                                class="p-6 border-b border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/30 flex justify-between items-center">
+                                <h3 class="text-lg font-bold text-secondary dark:text-white flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary">school</span> Choix de la
+                                    Filière
+                                </h3>
+                                <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded font-bold">Étape
+                                    2/4</span>
+                            </div>
+                            <div class="p-6 sm:p-8 flex flex-col gap-6">
+                                <div class="space-y-2">
+                                    <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Niveau
+                                        d'étude souhaité <span class="text-red-500">*</span></label>
+                                    <div class="relative">
+                                        <span
+                                            class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 material-symbols-outlined text-[20px]">school</span>
+                                        <select required
+                                            class="w-full h-12 pl-12 pr-4 rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 focus:border-primary focus:ring-primary dark:text-white transition-all text-slate-600 dark:text-slate-300 appearance-none"
+                                            id="level" name="level">
+                                            <option value="" disabled selected>Sélectionner un niveau</option>
+                                            <option value="Licence 1">Licence 1 (L1)</option>
+                                            <option value="Licence 2">Licence 2 (L2)</option>
+                                            <option value="Licence 3">Licence 3 (L3)</option>
+                                            <option value="Master 1">Master 1 (M1)</option>
+                                            <option value="Master 2">Master 2 (M2)</option>
+                                        </select>
+                                        <span
+                                            class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 material-symbols-outlined text-[20px] pointer-events-none">expand_more</span>
+                                    </div>
+                                </div>
+                                <div class="space-y-2">
+                                    <label
+                                        class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Domaine
+                                        de formation <span class="text-red-500">*</span></label>
+                                    <div class="relative">
+                                        <span
+                                            class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 material-symbols-outlined text-[20px]">science</span>
+                                        <select required
+                                            class="w-full h-12 pl-12 pr-4 rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 focus:border-primary focus:ring-primary dark:text-white transition-all text-slate-600 dark:text-slate-300 appearance-none"
+                                            id="filiere" name="filiere">
+                                            <option value="" disabled selected>Sélectionner une filière</option>
+                                            <option value="Génie Civil">Génie Civil</option>
+                                            <option value="Génie Électromécanique">Génie Électromécanique</option>
+                                            <option value="Génie Numérique">Génie Numérique</option>
+                                            <option value="Génie Physique-Chimie">Génie Physique-Chimie</option>
+                                            <option value="Génie Agricole">Génie Agricole</option>
+                                            <option value="Gestion et Conservation de la Biodiversité">Gestion et
+                                                Conservation de la Biodiversité</option>
+                                            <option value="Sciences Environnementales">Sciences Environnementales
+                                            </option>
+                                        </select>
+                                        <span
+                                            class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 material-symbols-outlined text-[20px] pointer-events-none">expand_more</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Documents -->
+                    <div class="form-step hidden" data-step="3">
+                        <div
+                            class="bg-white dark:bg-[#1a2c2b] rounded-xl shadow-lg border border-slate-100 dark:border-slate-800 overflow-hidden">
+                            <div
+                                class="p-6 border-b border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/30 flex justify-between items-center">
+                                <h3 class="text-lg font-bold text-secondary dark:text-white flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary">description</span> Documents
+                                    Requis
+                                </h3>
+                                <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded font-bold">Étape
+                                    3/4</span>
+                            </div>
+                            <div class="p-6 sm:p-8 flex flex-col gap-6">
+                                <p class="text-sm text-slate-500 dark:text-slate-400">Veuillez téléverser les documents
+                                    suivants au format PDF ou JPG (Max 5Mo par fichier).</p>
+
+                                <!-- Document 1: Diplôme -->
+                                <div
+                                    class="border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-lg p-6 text-center hover:border-primary transition-colors bg-slate-50 dark:bg-slate-900/50">
+                                    <input type="file" id="doc_bac" name="doc_diplome" accept=".pdf,.jpg,.png"
+                                        class="hidden">
+                                    <label for="doc_bac" class="cursor-pointer flex flex-col items-center gap-2">
+                                        <span
+                                            class="material-symbols-outlined text-4xl text-slate-400">upload_file</span>
+                                        <span class="font-bold text-slate-700 dark:text-white">Diplôme <span
+                                                class="text-red-500">*</span></span>
+                                        <span class="text-xs text-slate-500" id="doc_bac_name">Cliquer pour
+                                            parcourir</span>
+                                    </label>
+                                </div>
+
+                                <!-- Document 2: Demande manuscrite -->
+                                <div
+                                    class="border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-lg p-6 text-center hover:border-primary transition-colors bg-slate-50 dark:bg-slate-900/50">
+                                    <input type="file" id="doc_demande" name="doc_demande" accept=".pdf,.jpg,.png"
+                                        class="hidden">
+                                    <label for="doc_demande" class="cursor-pointer flex flex-col items-center gap-2">
+                                        <span
+                                            class="material-symbols-outlined text-4xl text-slate-400">edit_document</span>
+                                        <span class="font-bold text-slate-700 dark:text-white">Demande manuscrite <span
+                                                class="text-red-500">*</span></span>
+                                        <span class="text-xs text-slate-500" id="doc_demande_name">Cliquer pour
+                                            parcourir</span>
+                                    </label>
+                                </div>
+
+                                <!-- Document 3: Acte de naissance légalisée -->
+                                <div
+                                    class="border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-lg p-6 text-center hover:border-primary transition-colors bg-slate-50 dark:bg-slate-900/50">
+                                    <input type="file" id="doc_acte" name="doc_acte" accept=".pdf,.jpg,.png"
+                                        class="hidden">
+                                    <label for="doc_acte" class="cursor-pointer flex flex-col items-center gap-2">
+                                        <span
+                                            class="material-symbols-outlined text-4xl text-slate-400">assignment_ind</span>
+                                        <span class="font-bold text-slate-700 dark:text-white">Acte de naissance
+                                            légalisée <span class="text-red-500">*</span></span>
+                                        <span class="text-xs text-slate-500" id="doc_acte_name">Cliquer pour
+                                            parcourir</span>
+                                    </label>
+                                </div>
+
+                                <!-- Document 4: Copie légalisée de la pièce d'identité -->
+                                <div
+                                    class="border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-lg p-6 text-center hover:border-primary transition-colors bg-slate-50 dark:bg-slate-900/50">
+                                    <input type="file" id="doc_id" name="doc_id" accept=".pdf,.jpg,.png" class="hidden">
+                                    <label for="doc_id" class="cursor-pointer flex flex-col items-center gap-2">
+                                        <span class="material-symbols-outlined text-4xl text-slate-400">badge</span>
+                                        <span class="font-bold text-slate-700 dark:text-white">Copie légalisée de la
+                                            pièce d'identité <span class="text-red-500">*</span></span>
+                                        <span class="text-xs text-slate-500" id="doc_id_name">Cliquer pour
+                                            parcourir</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Récapitulatif -->
+                    <div class="form-step hidden" data-step="4">
+                        <div
+                            class="bg-white dark:bg-[#1a2c2b] rounded-xl shadow-lg border border-slate-100 dark:border-slate-800 overflow-hidden">
+                            <div
+                                class="p-6 border-b border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/30 flex justify-between items-center">
+                                <h3 class="text-lg font-bold text-secondary dark:text-white flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary">done_all</span> Récapitulatif
+                                </h3>
+                                <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded font-bold">Étape
+                                    4/4</span>
+                            </div>
+                            <div class="p-6 sm:p-8 flex flex-col gap-6">
+                                <div
+                                    class="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-lg flex flex-col gap-3 text-sm">
+                                    <div
+                                        class="flex flex-col sm:flex-row sm:justify-between border-b border-slate-200 dark:border-slate-700 pb-2">
+                                        <span class="text-slate-500">Nom complet</span>
+                                        <span class="font-bold text-slate-900 dark:text-white"
+                                            id="summary-name">-</span>
+                                    </div>
+                                    <div
+                                        class="flex flex-col sm:flex-row sm:justify-between border-b border-slate-200 dark:border-slate-700 pb-2">
+                                        <span class="text-slate-500">Email</span>
+                                        <span class="font-bold text-slate-900 dark:text-white"
+                                            id="summary-email">-</span>
+                                    </div>
+                                    <div
+                                        class="flex flex-col sm:flex-row sm:justify-between border-b border-slate-200 dark:border-slate-700 pb-2">
+                                        <span class="text-slate-500">Téléphone</span>
+                                        <span class="font-bold text-slate-900 dark:text-white"
+                                            id="summary-phone">-</span>
+                                    </div>
+                                    <div
+                                        class="flex flex-col sm:flex-row sm:justify-between border-b border-slate-200 dark:border-slate-700 pb-2">
+                                        <span class="text-slate-500">Niveau d'étude</span>
+                                        <span class="font-bold text-slate-900 dark:text-white"
+                                            id="summary-level">-</span>
+                                    </div>
+                                    <div
+                                        class="flex flex-col sm:flex-row sm:justify-between border-b border-slate-200 dark:border-slate-700 pb-2">
+                                        <span class="text-slate-500">Filière</span>
+                                        <span class="font-bold text-slate-900 dark:text-white"
+                                            id="summary-filiere">-</span>
+                                    </div>
+                                    <div
+                                        class="flex flex-col sm:flex-row sm:justify-between border-b border-slate-200 dark:border-slate-700 pb-2">
+                                        <span class="text-slate-500">Documents téléversés</span>
+                                        <div class="flex flex-col gap-1 text-right">
+                                            <span class="font-bold text-slate-900 dark:text-white"
+                                                id="summary-doc-diplome">-</span>
+                                            <span class="font-bold text-slate-900 dark:text-white"
+                                                id="summary-doc-demande">-</span>
+                                            <span class="font-bold text-slate-900 dark:text-white"
+                                                id="summary-doc-acte">-</span>
+                                            <span class="font-bold text-slate-900 dark:text-white"
+                                                id="summary-doc-id">-</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Notice dossier physique -->
+                                <div
+                                    class="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4 flex gap-3">
+                                    <span
+                                        class="material-symbols-outlined text-amber-500 mt-0.5 shrink-0">warning</span>
+                                    <div class="text-sm text-amber-800 dark:text-amber-200">
+                                        <strong>Important :</strong> Après votre pré-inscription en ligne, vous devrez
+                                        compléter votre dossier <strong>en personne à l'Université</strong> avec les
+                                        documents suivants :
+                                        <ul class="mt-2 space-y-1 list-disc list-inside">
+                                            <li>4 photos d'identité (format demi-carte)</li>
+                                            <li>Diplôme (original)</li>
+                                            <li>Demande manuscrite</li>
+                                            <li>Acte de naissance légalisée</li>
+                                            <li>Copie légalisée de la pièce d'identité</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <label class="flex items-start gap-3 mt-2 cursor-pointer">
+                                    <input type="checkbox" required
+                                        class="mt-1 rounded border-slate-300 text-primary focus:ring-primary shadow-sm"
+                                        name="terms">
+                                    <span class="text-sm text-slate-600 dark:text-slate-300">
+                                        Je certifie que les informations fournies sont exactes et j'accepte les
+                                        conditions d'admission de l'USIH. Je m'engage à compléter mon dossier physique à
+                                        l'université.
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="flex items-center justify-between pt-4">
+                        <button id="btn-prev"
+                            class="px-6 h-12 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-500 font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors disabled:opacity-50"
+                            disabled type="button">
+                            <span class="hidden sm:inline">Précédent</span>
+                            <span class="material-symbols-outlined sm:hidden">arrow_back</span>
+                        </button>
+                        <button id="btn-next"
+                            class="group relative overflow-hidden px-8 h-12 rounded-lg bg-primary text-white font-bold hover:bg-primary-dark transition-all shadow-[0_4px_14px_0_rgba(184,46,59,0.39)] hover:shadow-[0_6px_20px_rgba(184,46,59,0.23)] hover:-translate-y-1 active:translate-y-0"
+                            type="button">
+                            <div
+                                class="absolute inset-0 w-3 border-r-2 border-white/20 skew-x-[-25deg] group-hover:animate-[shine_1s_infinite]">
+                            </div>
+                            <span class="flex items-center gap-2">
+                                Suivant
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </span>
+                        </button>
+                        <button id="btn-submit"
+                            class="hidden group relative overflow-hidden px-8 h-12 rounded-lg bg-green-600 text-white font-bold hover:bg-green-700 transition-all shadow-lg hover:-translate-y-1 active:translate-y-0"
+                            type="submit">
+                            <div
+                                class="absolute inset-0 w-full bg-white/20 scale-x-0 origin-left group-hover:scale-x-100 transition-transform">
+                            </div>
+                            <span class="flex items-center gap-2 relative z-10">
+                                Soumettre ma demande
+                                <span class="material-symbols-outlined">send</span>
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <!-- Right Column: Info & Sticky Sidebar -->
+            <div class="lg:col-span-4 flex flex-col gap-6">
+                <!-- Fees Card -->
+                <div
+                    class="bg-gradient-to-br from-primary to-primary-dark rounded-xl shadow-lg p-6 text-white relative overflow-hidden group">
+                    <div
+                        class="absolute -right-10 -top-10 w-32 h-32 bg-white/10 rounded-full blur-2xl group-hover:bg-white/20 transition-all duration-700">
+                    </div>
+                    <div class="absolute -left-10 -bottom-10 w-32 h-32 bg-black/5 rounded-full blur-2xl"></div>
+                    <div class="relative z-10 flex flex-col gap-1">
+                        <div class="flex items-start justify-between">
+                            <span
+                                class="material-symbols-outlined text-4xl mb-4 bg-white/20 p-2 rounded-lg backdrop-blur-sm">payments</span>
+                            <span
+                                class="text-xs font-bold uppercase tracking-wider bg-white/20 px-2 py-1 rounded backdrop-blur-sm">Obligatoire</span>
+                        </div>
+                        <h3 class="text-lg font-medium opacity-90">Frais de dossier</h3>
+                        <p class="text-3xl font-black tracking-tight mb-2">100 000 FCFA</p>
+                        <p class="text-sm opacity-80 leading-relaxed border-t border-white/20 pt-3 mt-1">
+                            Montant non remboursable à régler lors de la validation finale du dossier.
+                        </p>
+                    </div>
+                </div>
+                <!-- Support Card -->
+                <div
+                    class="bg-white dark:bg-[#1a2c2b] rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 p-6 flex flex-col gap-4">
+                    <h4 class="font-bold text-secondary dark:text-white flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">support_agent</span>
+                        Besoin d'aide ?
+                    </h4>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">
+                        Notre équipe d'admission est disponible pour vous assister dans votre démarche.
+                    </p>
+                    <div class="flex flex-col gap-3">
+                        <a class="flex items-center gap-3 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors p-3 rounded-lg bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700"
+                            href="#">
+                            <span class="material-symbols-outlined text-primary">call</span>
+                            +241 01 02 03 04
+                        </a>
+                        <a class="flex items-center gap-3 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors p-3 rounded-lg bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700"
+                            href="mailto:jmoussouami@icloud.com">
+                            <span class="material-symbols-outlined text-primary">mail</span>
+                            jmoussouami@icloud.com
+                        </a>
+                    </div>
+                </div>
+                <!-- Doc Checklist (Preview of what's needed) -->
+                <div
+                    class="bg-white dark:bg-[#1a2c2b] rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 p-6">
+                    <h4
+                        class="font-bold text-secondary dark:text-white mb-4 text-sm uppercase tracking-wide text-slate-400">
+                        Documents Requis</h4>
+                    <ul class="space-y-3">
+                        <li
+                            class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-300 border-b border-slate-100 dark:border-slate-800 pb-2">
+                            <span
+                                class="material-symbols-outlined text-primary text-[20px] shrink-0">check_circle</span>
+                            <span>Diplôme</span>
+                        </li>
+                        <li
+                            class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-300 border-b border-slate-100 dark:border-slate-800 pb-2">
+                            <span
+                                class="material-symbols-outlined text-primary text-[20px] shrink-0">check_circle</span>
+                            <span>Demande manuscrite</span>
+                        </li>
+                        <li
+                            class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-300 border-b border-slate-100 dark:border-slate-800 pb-2">
+                            <span
+                                class="material-symbols-outlined text-primary text-[20px] shrink-0">check_circle</span>
+                            <span>Acte de naissance légalisée</span>
+                        </li>
+                        <li
+                            class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-300 border-b border-slate-100 dark:border-slate-800 pb-2">
+                            <span
+                                class="material-symbols-outlined text-primary text-[20px] shrink-0">check_circle</span>
+                            <span>Copie légalisée de la pièce d'identité</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-300">
+                            <span
+                                class="material-symbols-outlined text-amber-500 text-[20px] shrink-0">photo_camera</span>
+                            <span>4 photos d'identité (demi-carte) — <em>à fournir en physique</em></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var steps = document.querySelectorAll('.form-step');
+                var stepperItems = document.querySelectorAll('.stepper-item');
+                var line1 = document.getElementById('line-1');
+                var line2 = document.getElementById('line-2');
+                var line3 = document.getElementById('line-3');
+
+                var btnNext = document.getElementById('btn-next');
+                var btnPrev = document.getElementById('btn-prev');
+                var btnSubmit = document.getElementById('btn-submit');
+                var form = document.getElementById('multi-step-form');
+
+                var currentStep = 1;
+                var totalSteps = 4;
+
+                // File inputs text update
+                var fileInputs = [
+                    { id: 'doc_bac', labelId: 'doc_bac_name' },
+                    { id: 'doc_demande', labelId: 'doc_demande_name' },
+                    { id: 'doc_acte', labelId: 'doc_acte_name' },
+                    { id: 'doc_id', labelId: 'doc_id_name' }
+                ];
+                fileInputs.forEach(function (fi) {
+                    var el = document.getElementById(fi.id);
+                    if (el) {
+                        el.addEventListener('change', function (e) {
+                            if (e.target.files.length) {
+                                document.getElementById(fi.labelId).textContent = e.target.files[0].name;
+                            }
+                        });
+                    }
+                });
+
+                function updateUI() {
+                    // Show/hide form steps
+                    for (var i = 0; i < steps.length; i++) {
+                        var stepNum = parseInt(steps[i].getAttribute('data-step'));
+                        if (stepNum === currentStep) {
+                            steps[i].classList.remove('hidden');
+                            steps[i].style.display = '';
+                        } else {
+                            steps[i].classList.add('hidden');
+                            steps[i].style.display = 'none';
+                        }
+                    }
+
+                    // Update stepper visuals
+                    for (var j = 0; j < stepperItems.length; j++) {
+                        var s = parseInt(stepperItems[j].getAttribute('data-step'));
+                        var circle = stepperItems[j].querySelector('.step-circle');
+                        var label = stepperItems[j].querySelector('.step-label');
+
+                        if (s < currentStep) {
+                            // Completed step
+                            stepperItems[j].style.opacity = '1';
+                            circle.className = 'step-circle size-10 rounded-full bg-primary flex items-center justify-center text-white font-bold transition-all';
+                            circle.innerHTML = '<span class="material-symbols-outlined text-sm">check</span>';
+                            label.className = 'step-label text-xs font-bold text-primary text-center';
+                        } else if (s === currentStep) {
+                            // Active step
+                            stepperItems[j].style.opacity = '1';
+                            circle.className = 'step-circle size-10 rounded-full bg-primary flex items-center justify-center text-white font-bold shadow-[0_0_0_4px_rgba(184,46,59,0.2)] transition-all';
+                            circle.textContent = s;
+                            label.className = 'step-label text-xs font-bold text-primary text-center';
+                        } else {
+                            // Future step
+                            stepperItems[j].style.opacity = '0.5';
+                            circle.className = 'step-circle size-8 rounded-full bg-slate-100 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 flex items-center justify-center text-slate-400 dark:text-slate-500 font-bold transition-all';
+                            circle.textContent = s;
+                            label.className = 'step-label text-xs font-medium text-slate-500 dark:text-slate-400 text-center';
+                        }
+                    }
+
+                    // Update progress lines
+                    if (line1) line1.style.width = currentStep > 1 ? '100%' : '50%';
+                    if (line2) line2.style.width = currentStep > 2 ? '100%' : (currentStep === 2 ? '50%' : '0%');
+                    if (line3) line3.style.width = currentStep > 3 ? '100%' : (currentStep === 3 ? '50%' : '0%');
+
+                    // Button states
+                    btnPrev.disabled = (currentStep === 1);
+                    btnPrev.style.opacity = (currentStep === 1) ? '0.5' : '1';
+
+                    if (currentStep === totalSteps) {
+                        btnNext.style.display = 'none';
+                        btnSubmit.style.display = '';
+                        btnSubmit.classList.remove('hidden');
+
+                        // Populate summary
+                        var fn = document.getElementById('firstname');
+                        var ln = document.getElementById('lastname');
+                        var em = document.getElementById('email');
+                        var fi = document.getElementById('filiere');
+                        var lv = document.getElementById('level');
+                        var ph = document.getElementById('phone');
+                        var px = form.querySelector('select[name="phone_prefix"]');
+                        document.getElementById('summary-name').textContent = (fn ? fn.value : '') + ' ' + (ln ? ln.value : '');
+                        document.getElementById('summary-email').textContent = em ? em.value : '';
+                        document.getElementById('summary-phone').textContent = (px ? px.value : '') + ' ' + (ph ? ph.value : '');
+                        document.getElementById('summary-level').textContent = lv ? lv.value : 'Non spécifié';
+                        document.getElementById('summary-filiere').textContent = fi ? fi.value : 'Non spécifié';
+                        // Document names
+                        var db = document.getElementById('doc_bac');
+                        var dd = document.getElementById('doc_demande');
+                        var da = document.getElementById('doc_acte');
+                        var di = document.getElementById('doc_id');
+                        document.getElementById('summary-doc-diplome').textContent = (db && db.files.length) ? '✓ ' + db.files[0].name : '✗ Diplôme manquant';
+                        document.getElementById('summary-doc-demande').textContent = (dd && dd.files.length) ? '✓ ' + dd.files[0].name : '✗ Demande manquante';
+                        document.getElementById('summary-doc-acte').textContent = (da && da.files.length) ? '✓ ' + da.files[0].name : '✗ Acte manquant';
+                        document.getElementById('summary-doc-id').textContent = (di && di.files.length) ? '✓ ' + di.files[0].name : '✗ Pièce manquante';
+                    } else {
+                        btnNext.style.display = '';
+                        btnNext.classList.remove('hidden');
+                        btnSubmit.style.display = 'none';
+                    }
+                }
+
+                function validateStep(stepIndex) {
+                    var step = document.querySelector('.form-step[data-step="' + stepIndex + '"]');
+                    if (!step) return true;
+
+                    var isValid = true;
+
+                    // Validate text/email/date/select inputs
+                    var inputs = step.querySelectorAll('input[required], select[required]');
+                    for (var k = 0; k < inputs.length; k++) {
+                        var input = inputs[k];
+                        if (input.type === 'radio') {
+                            // Handle radio group: check if any radio with same name is checked
+                            var radioName = input.getAttribute('name');
+                            var checked = step.querySelector('input[name="' + radioName + '"]:checked');
+                            if (!checked) {
+                                isValid = false;
+                            }
+                        } else if (input.type === 'checkbox') {
+                            if (!input.checked) {
+                                input.style.borderColor = '#ef4444';
+                                isValid = false;
+                            } else {
+                                input.style.borderColor = '';
+                            }
+                        } else {
+                            if (!input.value || !input.value.trim()) {
+                                input.style.borderColor = '#ef4444';
+                                input.style.boxShadow = '0 0 0 1px #ef4444';
+                                isValid = false;
+                            } else {
+                                input.style.borderColor = '';
+                                input.style.boxShadow = '';
+                            }
+                        }
+                    }
+
+                    // Special file validation for step 3
+                    if (stepIndex === 3) {
+                        var docIds = ['doc_bac', 'doc_demande', 'doc_acte', 'doc_id'];
+                        for (var d = 0; d < docIds.length; d++) {
+                            var fileEl = document.getElementById(docIds[d]);
+                            if (fileEl && !fileEl.files.length) {
+                                fileEl.closest('.border-dashed').style.borderColor = '#ef4444';
+                                isValid = false;
+                            } else if (fileEl) {
+                                fileEl.closest('.border-dashed').style.borderColor = '';
+                            }
+                        }
+                    }
+
+                    if (!isValid) {
+                        alert('Veuillez remplir tous les champs obligatoires avant de continuer.');
+                    }
+                    return isValid;
+                }
+
+                // Next button
+                btnNext.addEventListener('click', function () {
+                    if (validateStep(currentStep)) {
+                        currentStep++;
+                        updateUI();
+                        var stepper = document.getElementById('stepper');
+                        if (stepper) {
+                            stepper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+
+                // Previous button
+                btnPrev.addEventListener('click', function () {
+                    if (currentStep > 1) {
+                        currentStep--;
+                        updateUI();
+                        var stepper = document.getElementById('stepper');
+                        if (stepper) {
+                            stepper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+
+                // Form submission
+                form.addEventListener('submit', function (e) {
+                    if (!validateStep(4)) {
+                        e.preventDefault();
+                        return;
+                    }
+                    var ak = form.querySelector('input[name="access_key"]');
+                    if (ak && ak.value === 'YOUR_ACCESS_KEY_HERE') {
+                        e.preventDefault();
+                        var lastname = document.getElementById('lastname').value;
+                        var firstname = document.getElementById('firstname').value;
+                        var email = document.getElementById('email').value;
+                        var filiere = document.getElementById('filiere').value;
+                        var dob = document.getElementById('dob').value;
+                        var nationality = document.getElementById('nationality').value;
+                        var phone = document.getElementById('phone') ? document.getElementById('phone').value : '';
+                        var prefix = form.querySelector('select[name="phone_prefix"]') ? form.querySelector('select[name="phone_prefix"]').value : '';
+                        var level = document.getElementById('level') ? document.getElementById('level').value : '';
+
+                        var body = 'Nouvelle pré-inscription USIH\n\n' +
+                            'Nom: ' + lastname + '\n' +
+                            'Prénom: ' + firstname + '\n' +
+                            'Date de naissance: ' + dob + '\n' +
+                            'Nationalité: ' + nationality + '\n' +
+                            'Email: ' + email + '\n' +
+                            'Téléphone: ' + prefix + ' ' + phone + '\n' +
+                            'Niveau: ' + level + '\n' +
+                            'Filière: ' + filiere;
+
+                        window.location.href = 'mailto:jmoussouami@icloud.com?subject=' + encodeURIComponent('Nouvelle Pré-inscription USIH') + '&body=' + encodeURIComponent(body);
+                    }
+                });
+
+                // Initialize
+                updateUI();
+            });
+        </script>
+    </main>
+    <footer class="bg-background-dark text-white border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Column 1: Brand -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <img src="logo_usih.JPG" alt="USIH Logo"
+                            class="h-10 w-auto object-contain rounded-md bg-white" />
+                        <div class="flex flex-col">
+                            <span class="text-xl font-black tracking-tighter text-white leading-none">USIH</span>
+                            <span class="text-[10px] uppercase tracking-widest text-secondary font-bold">Gabon</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        L'Université des Sciences et Ingénieries Hashem s'engage à former les leaders technologiques de
+                        demain avec rigueur et passion.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors"
+                            href="#">
+                            <span class="text-lg font-bold">f</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors"
+                            href="#">
+                            <span class="text-lg font-bold">in</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors"
+                            href="#">
+                            <span class="text-lg font-bold">x</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Column 2: Navigation -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white border-b border-primary/30 inline-block pb-2">
+                        Navigation Rapide</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                href="index.html"><span
+                                    class="material-symbols-outlined text-xs">chevron_right</span>Accueil</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                href="mission.html"><span
+                                    class="material-symbols-outlined text-xs">chevron_right</span>À propos</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                href="filiere.html"><span
+                                    class="material-symbols-outlined text-xs">chevron_right</span>Formations</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                href="admissions_scolarite.html"><span
+                                    class="material-symbols-outlined text-xs">chevron_right</span>Admissions</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                href="mission.html"><span
+                                    class="material-symbols-outlined text-xs">chevron_right</span>Campus &amp; Vie</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Column 3: Contact -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white border-b border-primary/30 inline-block pb-2">Contact
+                    </h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary mt-0.5">location_on</span>
+                            <span>Libreville, Charbonnages<br />Gabon</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">phone</span>
+                            <a href="tel:077828277" class="hover:text-primary transition-colors">077 82 82 77</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">mail</span>
+                            <a href="mailto:Contact@usih.fr"
+                                class="hover:text-primary transition-colors">Contact@usih.fr</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Column 4: Légal -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white border-b border-primary/30 inline-block pb-2">Légal
+                    </h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                    class="material-symbols-outlined text-xs">chevron_right</span>Mentions légales</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                    class="material-symbols-outlined text-xs">chevron_right</span>Politique de
+                                confidentialité</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                    class="material-symbols-outlined text-xs">chevron_right</span>Accessibilité</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                href="contact.html"><span
+                                    class="material-symbols-outlined text-xs">chevron_right</span>FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Bottom -->
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm text-center md:text-left">
+                    &copy; 2026 Université des Sciences et Ingénieries Hashem. Tous droits réservés.
+                </p>
+                <div class="flex items-center gap-2">
+                    <span class="text-gray-500 text-sm">Développé avec excellence au Gabon</span>
+                    <span class="material-symbols-outlined text-primary text-sm">favorite</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Ensure menu mobile script is only added once
+        if (!window.mobileMenuInitialized) {
+            document.addEventListener('DOMContentLoaded', () => {
+                const btn = document.getElementById('mobile-menu-btn');
+                const menu = document.getElementById('mobile-menu');
+                if (btn && menu) {
+                    btn.addEventListener('click', () => {
+                        menu.classList.toggle('hidden');
+                    });
+                }
+            });
+            window.mobileMenuInitialized = true;
+        }
+    </script>
+    <style>
+        /* Custom animation for the shiny button effect */
+        @keyframes shine {
+            100% {
+                left: 125%;
+            }
+        }
+    </style>
+</body>
+
+</html>

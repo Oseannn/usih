@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>USIH - Mission et Vie Universitaire</title>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#b82e3b",
+                        "primary-dark": "#9a2531",
+                        "secondary": "#f3b552",
+                        "accent": "#46aac2",
+                        "primary-dark": "#9a2531",
+                        "secondary": "#f3b552",
+                        "accent": "#46aac2",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#112120",
+                        "text-main": "#111817",
+                        "text-secondary": "#638886",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"],
+                        "body": ["Public Sans", "sans-serif"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main antialiased overflow-x-hidden">
+    <div class="relative flex min-h-screen w-full flex-col">
+        <!-- Header -->
+        <header class="sticky top-0 z-50 w-full bg-white border-b border-gray-100 shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20">
+                    <!-- Logo -->
+                    <a href="index.html" class="flex items-center gap-3">
+                        <img src="logo_usih.JPG" alt="USIH Logo"
+                            class="h-12 w-auto object-contain rounded-md bg-white" />
+                        <div class="flex flex-col">
+                            <span class="text-2xl font-black tracking-tighter text-text-main leading-none">USIH</span>
+                            <span class="text-[10px] uppercase tracking-widest text-secondary font-bold">Gabon</span>
+                        </div>
+                    </a>
+                    <!-- Desktop Navigation -->
+                    <nav class="hidden lg:flex items-center gap-8">
+                        <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                            href="index.html">Accueil</a>
+                        <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                            href="mission.html">Notre mission</a>
+                        <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                            href="filiere.html">Formations</a>
+                        <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                            href="admissions_scolarite.html">Admissions</a>
+                        <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                            href="contact.html">Contact</a>
+                    </nav>
+                    <!-- Actions -->
+                    <div class="flex items-center gap-4">
+                        <a class="inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-lg text-white bg-primary hover:bg-primary-dark shadow-lg shadow-primary/20 transition-all transform hover:-translate-y-0.5"
+                            href="pre-inscription.html">
+                            Candidater
+                        </a>
+                        <!-- Mobile menu button -->
+                        <button class="lg:hidden p-2 text-gray-600 hover:text-primary" id="mobile-menu-btn">
+                            <span class="material-symbols-outlined hover:scale-110 transition-transform">menu</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu (Hidden by default) -->
+            <div class="lg:hidden hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg"
+                id="mobile-menu">
+                <div class="px-4 pt-2 pb-6 space-y-1">
+                    <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                        href="index.html">Accueil</a>
+                    <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                        href="mission.html">Notre mission</a>
+                    <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                        href="filiere.html">Formations</a>
+                    <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                        href="admissions_scolarite.html">Admissions</a>
+                    <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+                        href="contact.html">Contact</a>
+                </div>
+            </div>
+        </header>
+        <main class="flex flex-col flex-1">
+            <!-- Hero Section -->
+            <div class="@container w-full">
+                <div
+                    class="relative flex min-h-[500px] flex-col gap-6 items-center justify-center p-4 text-center overflow-hidden bg-background-dark">
+                    <!-- Background Image with Overlay -->
+                    <div class="absolute inset-0 z-0">
+                        <img alt="African students in modern university campus"
+                            class="h-full w-full object-cover opacity-40"
+                            data-alt="African university students walking on modern campus"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoMz_s-wk4AgEZ9JZczw1CPjf9JQH1-hsNVVIrzih0h3RZr_exUqwde4mN0998_N4HXpuEewRykIvho-auq3at7P7tS3ihokozsmQJbg0TmQSWh0cXeZ2LNwdYEbWtCCmdft89ywp81afnpI0g6AvdD6pJNgo6LYqhIUAZaRiGiqj-xq_1yOg58yj5dFyUqEfMQ3jeBes_5BDp3x3gLdR7CwQq3knCSGMDoaSMNt95uwlCd4T5avXi0XXyLRiYGsvQcP2kTMmZxY0" />
+                        <div class="absolute inset-0 bg-background-dark/80">
+                        </div>
+                    </div>
+                    <div class="relative z-10 flex flex-col gap-4 max-w-[800px] animate-fade-in-up">
+                        <div class="flex justify-center gap-2 mb-2">
+                            <span
+                                class="bg-primary/20 text-primary border border-primary/30 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Institutionnel</span>
+                        </div>
+                        <h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-[-0.02em]">
+                            Former l'élite de l'ingénierie africaine
+                        </h1>
+                        <p class="text-gray-300 text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto">
+                            Une vision portée par l'espérance, l'intégrité et la réussite. L'USIH s'engage à bâtir le
+                            futur technologique du Gabon.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Breadcrumbs -->
+            <div class="border-b border-[#e5e9e9] bg-white">
+                <div class="max-w-7xl mx-auto px-4 md:px-10 py-3">
+                    <div class="flex flex-wrap gap-2 items-center text-sm">
+                        <a class="text-text-secondary hover:text-primary transition-colors"
+                            href="index.html">Accueil</a>
+                        <span class="text-text-secondary/50">/</span>
+                        <span class="text-[#111817] font-medium">Mission et Vie Universitaire</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Mission & Vision Section -->
+            <section class="py-16 px-4 md:px-10 bg-white">
+                <div class="max-w-7xl mx-auto">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div class="flex flex-col gap-6">
+                            <div class="flex flex-col gap-2">
+                                <h2 class="text-primary font-bold tracking-widest uppercase text-sm">Notre Identité</h2>
+                                <h3 class="text-[#111817] text-3xl md:text-4xl font-black leading-tight">
+                                    Une ambition panafricaine ancrée au Gabon
+                                </h3>
+                            </div>
+                            <p class="text-text-secondary text-lg leading-relaxed">
+                                L'Université des Sciences et Ingénieries Hashem (USIH) ne se contente pas de délivrer
+                                des diplômes. Nous formons les leaders qui concevront les infrastructures et les
+                                technologies de demain.
+                            </p>
+                            <div class="flex flex-col gap-6 mt-4">
+                                <div class="flex gap-4 p-4 rounded-xl bg-background-light border border-[#e5e9e9]">
+                                    <div class="shrink-0 text-primary bg-white p-2 rounded-lg shadow-sm h-fit">
+                                        <span class="material-symbols-outlined text-3xl">lightbulb</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-[#111817] font-bold text-lg mb-1">Notre Mission</h4>
+                                        <p class="text-text-secondary text-sm leading-relaxed">
+                                            Offrir une éducation scientifique de classe mondiale, alliant théorie
+                                            rigoureuse et pratique industrielle, pour répondre aux défis du
+                                            développement durable en Afrique centrale.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4 p-4 rounded-xl bg-background-light border border-[#e5e9e9]">
+                                    <div class="shrink-0 text-primary bg-white p-2 rounded-lg shadow-sm h-fit">
+                                        <span class="material-symbols-outlined text-3xl">visibility</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-[#111817] font-bold text-lg mb-1">Notre Vision</h4>
+                                        <p class="text-text-secondary text-sm leading-relaxed">
+                                            Devenir le pôle d'excellence incontournable pour les sciences et
+                                            l'ingénierie d'ici 2030, reconnu pour la qualité de sa recherche et
+                                            l'employabilité de ses diplômés.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative h-full min-h-[400px] rounded-2xl overflow-hidden shadow-xl group">
+                            <img alt="Modern engineering laboratory equipment"
+                                class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                data-alt="Students working in a high-tech engineering lab"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZRagCCO0LQk1HbZ7fOnra0nNA4NUoWFoF6I_19SOcElNqCFWI-ExIaHjKNMl_xe6JoaORj6w87ASc5cfvGB7A4mUy2Bk6Bf1PAr-IZ6Dg0HpWOWGkyv2QTc-Hn3CuLVY4_wG6i2_jLcTtW5izwy1bK2JRa7kKuCZHEEPELP5e6fkK0MjBzX_M03-TXPpWoTD5dxi3VZpcfLpKtS6QkvycZbsI1pYobhrc7ZSzMGnIMaAUq3ApZqHQ-0HdwbdSToVnIpSHdlsFrqc" />
+                            <div class="absolute inset-0 bg-black/40"></div>
+                            <div class="absolute bottom-6 left-6 right-6 text-white">
+                                <p class="font-bold text-lg">Laboratoires de pointe</p>
+                                <p class="text-sm opacity-90">Des équipements aux standards internationaux pour nos
+                                    étudiants.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Values Section -->
+            <section class="py-16 px-4 md:px-10 bg-background-light border-y border-[#e5e9e9]">
+                <div class="max-w-7xl mx-auto flex flex-col gap-10">
+                    <div class="text-center max-w-3xl mx-auto">
+                        <h2 class="text-[#111817] text-3xl font-black mb-4">Nos Valeurs Fondamentales</h2>
+                        <p class="text-text-secondary">
+                            L'excellence académique à l'USIH repose sur un socle éthique solide. Ces valeurs guident
+                            chaque décision, chaque cours et chaque projet au sein de notre campus.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Value 1 -->
+                        <div
+                            class="bg-white p-8 rounded-xl border border-[#e5e9e9] shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center gap-4">
+                            <div
+                                class="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+                                <span class="material-symbols-outlined text-3xl">volunteer_activism</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-[#111817]">Espérance</h3>
+                            <p class="text-text-secondary text-sm leading-relaxed">
+                                Croire en la jeunesse gabonaise et en sa capacité à transformer positivement notre
+                                société par l'innovation et le travail.
+                            </p>
+                        </div>
+                        <!-- Value 2 -->
+                        <div
+                            class="bg-white p-8 rounded-xl border border-[#e5e9e9] shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center gap-4 relative overflow-hidden">
+                            <div class="absolute top-0 w-full h-1 bg-primary"></div>
+                            <div
+                                class="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+                                <span class="material-symbols-outlined text-3xl">verified_user</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-[#111817]">Intégrité</h3>
+                            <p class="text-text-secondary text-sm leading-relaxed">
+                                Former des ingénieurs responsables, honnêtes et éthiques, conscients de leur impact sur
+                                l'environnement et la communauté.
+                            </p>
+                        </div>
+                        <!-- Value 3 -->
+                        <div
+                            class="bg-white p-8 rounded-xl border border-[#e5e9e9] shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center gap-4">
+                            <div
+                                class="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+                                <span class="material-symbols-outlined text-3xl">school</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-[#111817]">Réussite</h3>
+                            <p class="text-text-secondary text-sm leading-relaxed">
+                                Une culture du résultat et de l'excellence qui pousse chacun à se dépasser pour
+                                atteindre les plus hauts standards académiques.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Vie Universitaire Section -->
+            <section class="py-16 px-4 md:px-10 bg-white">
+                <div class="max-w-7xl mx-auto">
+                    <div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-6">
+                        <div class="max-w-2xl">
+                            <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-2">Vie sur le Campus
+                            </h2>
+                            <h3 class="text-[#111817] text-3xl md:text-4xl font-black leading-tight">
+                                Au-delà des cours : L'expérience USIH
+                            </h3>
+                            <p class="text-text-secondary mt-4 text-lg">
+                                La vie à l'USIH est rythmée par une discipline rigoureuse et une émulation
+                                intellectuelle constante. Nous créons un environnement propice à l'éclosion des talents.
+                            </p>
+                        </div>
+                        <a class="text-primary font-bold hover:underline flex items-center gap-1 group"
+                            href="admissions_scolarite.html">
+                            Voir le guide étudiant
+                            <span
+                                class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <!-- Card 1 -->
+                        <div class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-gray-100">
+                            <img alt="Professor mentoring student in library"
+                                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Professor mentoring a student in a library setting"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXAkmPUk5jqHxZDLCV6wWeCB2wmN3KlChGn9-CgZwbA-gTB3Eg7e0GydzTJ3rxJqboFNoIzx4fXF9W_Lbl1gjt3FIe90M5B9QQRE6y_yRa1EaI5w4rxktBNmk4qRS7uxHVXkAWYftyAnlVIWRB_SIsLkNxZB_9o7FYHxnPadiY9a5ix7g6A5tvaqHbRL3NIG6O1wQPoSf5qDa15wwHmsArq4JXbwFlJqv34NR_pxaP9whmZizjYVOElZrTRMgwKEIekh9T8_pIaUQ" />
+                            <div class="absolute inset-0 bg-black/60 p-6 flex flex-col justify-end">
+                                <div class="bg-primary text-[#111817] p-2 rounded-lg w-fit mb-3">
+                                    <span class="material-symbols-outlined">diversity_3</span>
+                                </div>
+                                <h4 class="text-white text-xl font-bold mb-2">Encadrement</h4>
+                                <p class="text-gray-300 text-sm">
+                                    Un ratio professeur/étudiant optimal garantissant un suivi personnalisé et un
+                                    mentorat continu.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-gray-100">
+                            <img alt="Modern clean architecture of university building"
+                                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Clean and modern university architecture hallway"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEUUFTjFsakDJxwB35au-VLQ6WJCjRjNaz0l4ten1RtRWRwpBQbDGzAuH62Q338XUGGu3ZJuqepVIiPCzJ7ZgF0-rgZDISkLEOL4ztXArOUuFDaONBTfbFnBZlPl5V-XpouvGwovThnBnlIdJ4nMzRdKycYS6BjhjbQEBoUcccpyMxcVA-BasNhMalm39yaJWMNd4DoKrjddfwRpzF7v37evm4bk-Q8b7WeiHwj89Xw5avtFC2c3nb4Ur9gy2nZZxBp5yBSkF1Gw8" />
+                            <div class="absolute inset-0 bg-black/60 p-6 flex flex-col justify-end">
+                                <div class="bg-primary text-[#111817] p-2 rounded-lg w-fit mb-3">
+                                    <span class="material-symbols-outlined">gavel</span>
+                                </div>
+                                <h4 class="text-white text-xl font-bold mb-2">Discipline</h4>
+                                <p class="text-gray-300 text-sm">
+                                    La ponctualité et la rigueur sont les piliers de notre formation, préparant au monde
+                                    professionnel.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-gray-100">
+                            <img alt="Engineering students collaborating on a project with blueprints"
+                                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Students collaborating on a technical project with blueprints"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7N2SB8OPMnLHdIEp8ItlNxwC0mmGYrx--xwd9aLVhV-ckepLJzTksFoClAZLhNMI4iuICkd6e0uAN1hdg1x2ZugKBjJU9MdOklT6DRcRLztxjDySCEZHryMchfaavRI2_Hs0AtWFfV4dwaS_u3GJWXM8LbhK_MNBv5yznEo9qijVHDfMOe8NhJhYVBwv7Vb6I5Nwu0tluHfTZcCporYvEDFliOrUmNBrKqFSG3JecoFG3AzGpxZL7uf022L2Ys1VRz6s62fPQFyQ" />
+                            <div class="absolute inset-0 bg-black/60 p-6 flex flex-col justify-end">
+                                <div class="bg-primary text-[#111817] p-2 rounded-lg w-fit mb-3">
+                                    <span class="material-symbols-outlined">precision_manufacturing</span>
+                                </div>
+                                <h4 class="text-white text-xl font-bold mb-2">Projets Pratiques</h4>
+                                <p class="text-gray-300 text-sm">
+                                    Apprentissage par le projet (PBL) dès la première année pour confronter la théorie
+                                    au réel.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-gray-100">
+                            <img alt="Group of diverse students studying together"
+                                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Group of diverse students studying together outdoors"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeGhx0__fIOpH-ftj9AsDFUPFrukxYonNNG-ibXcJdm5-IJFLmC09b9H7J4aIR2q83Aap-7DKXwEFyPbD-9GJ_szeW145MGjFLTJNB3yV9XfHyxuGp4KQ7c7tyTlud7RKcdUHG2J7DjAfc0i4vj1kL0SjQANG-9f_9j_RwYyVAqFq4gQY1CbdYLEC_0kJFKMqaKB9A8ZKLECELIHWnJD3SIEYf9kdBpjovadkQfv5bfgqo5dxFgbHw7jltJ9tyGBFNYxHPuzxxKTQ" />
+                            <div class="absolute inset-0 bg-black/60 p-6 flex flex-col justify-end">
+                                <div class="bg-primary text-[#111817] p-2 rounded-lg w-fit mb-3">
+                                    <span class="material-symbols-outlined">emoji_events</span>
+                                </div>
+                                <h4 class="text-white text-xl font-bold mb-2">Excellence</h4>
+                                <p class="text-gray-300 text-sm">
+                                    Participation aux concours internationaux et hackathons pour stimuler l'innovation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Testimonial / Quote Section -->
+            <section class="py-20 px-4 md:px-10 bg-[#111817] text-white">
+                <div class="max-w-4xl mx-auto text-center flex flex-col items-center gap-8">
+                    <span class="material-symbols-outlined text-6xl text-primary opacity-50">format_quote</span>
+                    <h3 class="text-2xl md:text-4xl font-bold italic font-display leading-normal">
+                        "L'Afrique n'a pas besoin de charité, elle a besoin d'ingénieurs compétents. À l'USIH, nous ne
+                        formons pas seulement des techniciens, nous forgeons les bâtisseurs du Gabon de demain."
+                    </h3>
+                    <div class="flex items-center gap-4 mt-4">
+                        <div class="size-16 rounded-full overflow-hidden border-2 border-primary">
+                            <img alt="Portrait of the Dean" class="w-full h-full object-cover"
+                                data-alt="Portrait of a distinguished African academic man"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdNLghFQgS2GvxNp2t9wXw8sxJCdLX_sjD7xzfryckbbDYqPZKQMB-XRH14GHyJTf5C_8zXeLz7lB4U2sgZqL6GYKAD6JPsQut3BUWiYa0VcTfcBqevcOA8iDYd9q5--ExR5SVxHJyePCyfAIvfv9NF48Y-BAQVp9o3FAYxERYqcVLDUZMn5PthsKr_reXzrKhCxo9N_J62NvT-pZQa1n8tTNjwJ0Z0kESlvd0d4eJc26QRGyZc_-uyK7WsRFayDAedyocN8-E4OA" />
+                        </div>
+                        <div class="text-left">
+                            <div class="font-bold text-lg text-white">Dr. Jean-Marc Oye Mba</div>
+                            <div class="text-primary text-sm font-medium">Doyen de la Faculté des Sciences</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Call to Action -->
+            <section class="py-20 px-4 md:px-10 bg-background-light">
+                <div
+                    class="max-w-5xl mx-auto bg-white rounded-2xl p-8 md:p-12 shadow-lg border border-[#e5e9e9] flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="flex flex-col gap-4 max-w-xl">
+                        <h2 class="text-[#111817] text-3xl font-black leading-tight">Prêt à rejoindre l'élite ?</h2>
+                        <p class="text-text-secondary text-lg">
+                            Les admissions pour la prochaine rentrée académique sont ouvertes. Découvrez nos programmes
+                            et déposez votre dossier.
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+                        <a href="pre-inscription.html"
+                            class="flex items-center justify-center whitespace-nowrap rounded-lg h-12 px-8 bg-primary text-[#111817] text-base font-bold shadow-md hover:brightness-105 hover:-translate-y-0.5 transition-all">
+                            Déposer ma candidature
+                        </a>
+                        <a href="admissions_scolarite.html"
+                            class="flex items-center justify-center whitespace-nowrap rounded-lg h-12 px-8 bg-white border-2 border-[#e5e9e9] text-[#111817] text-base font-bold hover:bg-gray-50 transition-all">
+                            Télécharger la brochure
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="bg-background-dark text-white border-t border-gray-800 pt-16 pb-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                    <!-- Column 1: Brand -->
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-3">
+                            <img src="logo_usih.JPG" alt="USIH Logo"
+                                class="h-10 w-auto object-contain rounded-md bg-white" />
+                            <div class="flex flex-col">
+                                <span class="text-xl font-black tracking-tighter text-white leading-none">USIH</span>
+                                <span
+                                    class="text-[10px] uppercase tracking-widest text-secondary font-bold">Gabon</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            L'Université des Sciences et Ingénieries Hashem s'engage à former les leaders technologiques
+                            de
+                            demain avec rigueur et passion.
+                        </p>
+                        <div class="flex gap-4">
+                            <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors"
+                                href="#">
+                                <span class="text-lg font-bold">f</span>
+                            </a>
+                            <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors"
+                                href="#">
+                                <span class="text-lg font-bold">in</span>
+                            </a>
+                            <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors"
+                                href="#">
+                                <span class="text-lg font-bold">x</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Column 2: Navigation -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-6 text-white border-b border-primary/30 inline-block pb-2">
+                            Navigation Rapide</h4>
+                        <ul class="space-y-4 text-gray-400 text-sm">
+                            <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                    href="index.html"><span
+                                        class="material-symbols-outlined text-xs">chevron_right</span>Accueil</a></li>
+                            <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                    href="mission.html"><span
+                                        class="material-symbols-outlined text-xs">chevron_right</span>À propos</a></li>
+                            <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                    href="filiere.html"><span
+                                        class="material-symbols-outlined text-xs">chevron_right</span>Formations</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                    href="admissions_scolarite.html"><span
+                                        class="material-symbols-outlined text-xs">chevron_right</span>Admissions</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                    href="mission.html"><span
+                                        class="material-symbols-outlined text-xs">chevron_right</span>Campus &amp;
+                                    Vie</a></li>
+                        </ul>
+                    </div>
+                    <!-- Column 3: Contact -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-6 text-white border-b border-primary/30 inline-block pb-2">
+                            Contact</h4>
+                        <ul class="space-y-4 text-gray-400 text-sm">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-0.5">location_on</span>
+                                <span>Libreville, Charbonnages<br />Gabon</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary">phone</span>
+                                <a href="tel:077828277" class="hover:text-primary transition-colors">+241 00 00 00
+                                    00</a>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary">mail</span>
+                                <a href="mailto:Contact@usih.fr"
+                                    class="hover:text-primary transition-colors">Contact@usih.fr</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Column 4: Légal -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-6 text-white border-b border-primary/30 inline-block pb-2">Légal
+                        </h4>
+                        <ul class="space-y-4 text-gray-400 text-sm">
+                            <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                        class="material-symbols-outlined text-xs">chevron_right</span>Mentions
+                                    légales</a></li>
+                            <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                        class="material-symbols-outlined text-xs">chevron_right</span>Politique de
+                                    confidentialité</a></li>
+                            <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                        class="material-symbols-outlined text-xs">chevron_right</span>Accessibilité</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                    href="contact.html"><span
+                                        class="material-symbols-outlined text-xs">chevron_right</span>FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Bottom -->
+                <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-gray-500 text-sm text-center md:text-left">
+                        &copy; 2026 Université des Sciences et Ingénieries Hashem. Tous droits réservés.
+                    </p>
+                    <div class="flex items-center gap-2">
+                        <span class="text-gray-500 text-sm">Développé avec excellence au Gabon</span>
+                        <span class="material-symbols-outlined text-primary text-sm">favorite</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            // Ensure menu mobile script is only added once
+            if (!window.mobileMenuInitialized) {
+                document.addEventListener('DOMContentLoaded', () => {
+                    const btn = document.getElementById('mobile-menu-btn');
+                    const menu = document.getElementById('mobile-menu');
+                    if (btn && menu) {
+                        btn.addEventListener('click', () => {
+                            menu.classList.toggle('hidden');
+                        });
+                    }
+                });
+                window.mobileMenuInitialized = true;
+            }
+        </script>
+    </div>
+</body>
+
+</html>

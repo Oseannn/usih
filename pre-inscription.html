@@ -165,28 +165,27 @@
                     </div>
                 </div>
 
-                <!-- Notice Web3Forms Integration -->
-                <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 flex gap-3 text-sm text-blue-800 dark:text-blue-200 hidden"
-                    id="web3forms-notice">
+                <!-- Notice FormSubmit Integration -->
+                <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 flex gap-3 text-sm text-blue-800 dark:text-blue-200"
+                    id="formsubmit-notice">
                     <span class="material-symbols-outlined text-blue-500 mt-0.5">info</span>
                     <div>
-                        <strong>Remarque pour l'administrateur :</strong> Pour recevoir les emails, créez une clé
-                        Web3Forms via <a href="https://web3forms.com/" target="_blank"
-                            class="underline font-bold">web3forms.com</a> avec votre email
-                        <code>contact@usih.fr</code> et remplacez la valeur
-                        <code>e0d44855-b09f-42c4-82ba-549bec6abbab</code>
-                        dans le code HTML. (Le formulaire est actuellement configuré pour la démonstration).
+                        <strong>Remarque pour l'administrateur :</strong> Lors de votre premier test d'envoi, FormSubmit
+                        vous enverra un lien sur <code>contact@usih.fr</code> pour activer l'adresse email. Cliquez
+                        dessus pour activer la réception définitive. (Note : la taille totale des pièces jointes ne doit
+                        pas dépasser 5Mo).
                     </div>
                 </div>
 
                 <!-- Form Section -->
-                <form id="multi-step-form" class="flex flex-col gap-6" action="https://api.web3forms.com/submit"
+                <form id="multi-step-form" class="flex flex-col gap-6" action="https://formsubmit.co/contact@usih.fr"
                     method="POST" enctype="multipart/form-data">
 
-                    <!-- Required Web3Forms Fields -->
-                    <input type="hidden" name="access_key" value="e0d44855-b09f-42c4-82ba-549bec6abbab">
-                    <input type="hidden" name="subject" value="Nouvelle Pré-inscription USIH">
-                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                    <!-- Required FormSubmit Fields -->
+                    <input type="hidden" name="_subject" value="Nouvelle Pré-inscription USIH">
+                    <input type="hidden" name="_template" value="table">
+                    <!-- Décommentez et modifiez l'URL ci-dessous si vous voulez rediriger vers l'accueil après l'envoi
+                    <input type="hidden" name="_next" value="https://oseannn.github.io/usih/"> -->
 
                     <!-- Step 1: Infos Personnelles -->
                     <div class="form-step active" data-step="1">
@@ -364,7 +363,8 @@
                             </div>
                             <div class="p-6 sm:p-8 flex flex-col gap-6">
                                 <p class="text-sm text-slate-500 dark:text-slate-400">Veuillez téléverser les documents
-                                    suivants au format PDF ou JPG (Max 5Mo par fichier).</p>
+                                    suivants au format PDF ou JPG <strong class="text-primary">(Taille totale max pour
+                                        l'ensemble : 5Mo)</strong>.</p>
 
                                 <!-- Document 1: Diplôme -->
                                 <div

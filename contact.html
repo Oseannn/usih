@@ -69,48 +69,59 @@
 <body
   class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display text-neutral-dark dark:text-white">
   <!-- Header / Navbar -->
-          <header class="sticky top-0 z-50 w-full bg-white border-b border-gray-100 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <a href="index.html" class="flex items-center gap-3">
-                    <img src="logo_usih.JPG" alt="USIH Logo" class="h-12 w-auto object-contain rounded-md bg-white"/>
-                    <div class="flex flex-col">
-                        <span class="text-2xl font-black tracking-tighter text-text-main leading-none">USIH</span>
-                        <span class="text-[10px] uppercase tracking-widest text-secondary font-bold">Gabon</span>
-                    </div>
-                </a>
-                <!-- Desktop Navigation -->
-                <nav class="hidden lg:flex items-center gap-8">
-                    <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors" href="index.html">Accueil</a>
-                    <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors" href="mission.html">Notre mission</a>
-                    <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors" href="filiere.html">Formations</a>
-                    <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors" href="admissions_scolarite.html">Admissions</a>
-                    <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors" href="contact.html">Contact</a>
-                </nav>
-                <!-- Actions -->
-                <div class="flex items-center gap-4">
-                    <a class="inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-lg text-white bg-primary hover:bg-primary-dark shadow-lg shadow-primary/20 transition-all transform hover:-translate-y-0.5" href="pre-inscription.html">
-                        Candidater
-                    </a>
-                    <!-- Mobile menu button -->
-                    <button class="lg:hidden p-2 text-gray-600 hover:text-primary" id="mobile-menu-btn">
-                        <span class="material-symbols-outlined hover:scale-110 transition-transform">menu</span>
-                    </button>
-                </div>
-            </div>
+  <header class="sticky top-0 z-50 w-full bg-white border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="logo_usih.JPG" alt="USIH Logo" class="h-12 w-auto object-contain rounded-md bg-white" />
+          <div class="flex flex-col">
+            <span class="text-2xl font-black tracking-tighter text-text-main leading-none">USIH</span>
+            <span class="text-[10px] uppercase tracking-widest text-secondary font-bold">Gabon</span>
+          </div>
+        </a>
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8">
+          <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+            href="index.html">Accueil</a>
+          <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors" href="mission.html">Notre
+            mission</a>
+          <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+            href="filiere.html">Formations</a>
+          <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+            href="admissions_scolarite.html">Admissions</a>
+          <a class="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+            href="contact.html">Contact</a>
+        </nav>
+        <!-- Actions -->
+        <div class="flex items-center gap-4">
+          <a class="inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-lg text-white bg-primary hover:bg-primary-dark shadow-lg shadow-primary/20 transition-all transform hover:-translate-y-0.5"
+            href="pre-inscription.html">
+            Candidater
+          </a>
+          <!-- Mobile menu button -->
+          <button class="lg:hidden p-2 text-gray-600 hover:text-primary" id="mobile-menu-btn">
+            <span class="material-symbols-outlined hover:scale-110 transition-transform">menu</span>
+          </button>
         </div>
-        <!-- Mobile Menu (Hidden by default) -->
-        <div class="lg:hidden hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg" id="mobile-menu">
-            <div class="px-4 pt-2 pb-6 space-y-1">
-                <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md" href="index.html">Accueil</a>
-                <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md" href="mission.html">Notre mission</a>
-                <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md" href="filiere.html">Formations</a>
-                <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md" href="admissions_scolarite.html">Admissions</a>
-                <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md" href="contact.html">Contact</a>
-            </div>
-        </div>
-    </header>
+      </div>
+    </div>
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="lg:hidden hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg" id="mobile-menu">
+      <div class="px-4 pt-2 pb-6 space-y-1">
+        <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+          href="index.html">Accueil</a>
+        <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+          href="mission.html">Notre mission</a>
+        <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+          href="filiere.html">Formations</a>
+        <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+          href="admissions_scolarite.html">Admissions</a>
+        <a class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+          href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
   <!-- Main Content -->
   <main class="flex-grow">
     <!-- Hero Section -->
@@ -223,7 +234,11 @@
               <p class="text-neutral-light dark:text-gray-400">Remplissez le formulaire ci-dessous et notre équipe vous
                 répondra dans les plus brefs délais.</p>
             </div>
-            <form action="#" class="space-y-6">
+            <form action="https://formsubmit.co/contact@usih.fr" method="POST" class="space-y-6">
+              <!-- FormSubmit config -->
+              <input type="hidden" name="_subject" value="Nouveau message de contact USIH">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_next" value="https://usih.fr/contact-succes.html">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <!-- Name -->
                 <div class="space-y-2">
@@ -235,9 +250,9 @@
                       class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-neutral-light">
                       <span class="material-symbols-outlined text-[20px]">person</span>
                     </div>
-                    <input
+                    <input required
                       class="block w-full pl-10 pr-3 py-3 border border-[#dce5e5] dark:border-white/20 rounded-lg text-neutral-dark dark:text-white bg-white dark:bg-white/5 placeholder-neutral-light/50 focus:ring-2 focus:ring-primary focus:border-primary transition-shadow sm:text-sm"
-                      id="name" placeholder="Ex: Jean Kombila" type="text" />
+                      id="name" name="name" placeholder="Ex: Jean Kombila" type="text" />
                   </div>
                 </div>
                 <!-- Email -->
@@ -250,9 +265,9 @@
                       class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-neutral-light">
                       <span class="material-symbols-outlined text-[20px]">alternate_email</span>
                     </div>
-                    <input
+                    <input required
                       class="block w-full pl-10 pr-3 py-3 border border-[#dce5e5] dark:border-white/20 rounded-lg text-neutral-dark dark:text-white bg-white dark:bg-white/5 placeholder-neutral-light/50 focus:ring-2 focus:ring-primary focus:border-primary transition-shadow sm:text-sm"
-                      id="email" placeholder="Ex: contact@email.com" type="email" />
+                      id="email" name="email" placeholder="Ex: contact@email.com" type="email" />
                   </div>
                 </div>
               </div>
@@ -267,7 +282,7 @@
                   </div>
                   <input
                     class="block w-full pl-10 pr-3 py-3 border border-[#dce5e5] dark:border-white/20 rounded-lg text-neutral-dark dark:text-white bg-white dark:bg-white/5 placeholder-neutral-light/50 focus:ring-2 focus:ring-primary focus:border-primary transition-shadow sm:text-sm"
-                    id="subject" placeholder="Objet de votre demande" type="text" />
+                    id="subject" name="subject" placeholder="Objet de votre demande" type="text" />
                 </div>
               </div>
               <!-- Message -->
@@ -276,16 +291,16 @@
                   Votre message <span class="text-red-500">*</span>
                 </label>
                 <div class="relative">
-                  <textarea
+                  <textarea required
                     class="block w-full p-3 border border-[#dce5e5] dark:border-white/20 rounded-lg text-neutral-dark dark:text-white bg-white dark:bg-white/5 placeholder-neutral-light/50 focus:ring-2 focus:ring-primary focus:border-primary transition-shadow sm:text-sm resize-none"
-                    id="message" placeholder="Comment pouvons-nous vous aider ?" rows="6"></textarea>
+                    id="message" name="message" placeholder="Comment pouvons-nous vous aider ?" rows="6"></textarea>
                 </div>
               </div>
               <!-- Submit Button -->
               <div class="pt-2">
                 <button
-                  class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 border border-transparent text-sm font-bold rounded-lg shadow-sm text-neutral-dark bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all"
-                  type="button">
+                  class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 border border-transparent text-sm font-bold rounded-lg shadow-sm text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all"
+                  type="submit">
                   Envoyer le message
                   <span class="material-symbols-outlined ml-2 text-[20px]">send</span>
                 </button>
@@ -299,100 +314,114 @@
       </div>
     </section>
     <!-- Institutional Footer -->
-        <footer class="bg-background-dark text-white border-t border-gray-800 pt-16 pb-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                <!-- Column 1: Brand -->
-                <div class="space-y-6">
-                    <div class="flex items-center gap-3">
-                        <img src="logo_usih.JPG" alt="USIH Logo" class="h-10 w-auto object-contain rounded-md bg-white"/>
-                        <div class="flex flex-col">
-                            <span class="text-xl font-black tracking-tighter text-white leading-none">USIH</span>
-                            <span class="text-[10px] uppercase tracking-widest text-secondary font-bold">Gabon</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        L'Université des Sciences et Ingénieries Hashem s'engage à former les leaders technologiques de
-                        demain avec rigueur et passion.
-                    </p>
-                    <div class="flex gap-4">
-                        <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors" href="#">
-                            <span class="text-lg font-bold">f</span>
-                        </a>
-                        <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors" href="#">
-                            <span class="text-lg font-bold">in</span>
-                        </a>
-                        <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors" href="#">
-                            <span class="text-lg font-bold">x</span>
-                        </a>
-                    </div>
-                </div>
-                <!-- Column 2: Navigation -->
-                <div>
-                    <h4 class="text-lg font-bold mb-6 text-white border-b border-primary/30 inline-block pb-2">Navigation Rapide</h4>
-                    <ul class="space-y-4 text-gray-400 text-sm">
-                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="index.html"><span class="material-symbols-outlined text-xs">chevron_right</span>Accueil</a></li>
-                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="mission.html"><span class="material-symbols-outlined text-xs">chevron_right</span>À propos</a></li>
-                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="filiere.html"><span class="material-symbols-outlined text-xs">chevron_right</span>Formations</a></li>
-                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="admissions_scolarite.html"><span class="material-symbols-outlined text-xs">chevron_right</span>Admissions</a></li>
-                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="mission.html"><span class="material-symbols-outlined text-xs">chevron_right</span>Campus &amp; Vie</a></li>
-                    </ul>
-                </div>
-                <!-- Column 3: Contact -->
-                <div>
-                    <h4 class="text-lg font-bold mb-6 text-white border-b border-primary/30 inline-block pb-2">Contact</h4>
-                    <ul class="space-y-4 text-gray-400 text-sm">
-                        <li class="flex items-start gap-3">
-                            <span class="material-symbols-outlined text-primary mt-0.5">location_on</span>
-                            <span>Libreville, Charbonnages<br/>Gabon</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary">phone</span>
-                            <a href="tel:077828277" class="hover:text-primary transition-colors">077 82 82 77</a>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary">mail</span>
-                            <a href="mailto:Contact@usih.fr" class="hover:text-primary transition-colors">Contact@usih.fr</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Column 4: Légal -->
-                <div>
-                    <h4 class="text-lg font-bold mb-6 text-white border-b border-primary/30 inline-block pb-2">Légal</h4>
-                    <ul class="space-y-4 text-gray-400 text-sm">
-                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-xs">chevron_right</span>Mentions légales</a></li>
-                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-xs">chevron_right</span>Politique de confidentialité</a></li>
-                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-xs">chevron_right</span>Accessibilité</a></li>
-                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="contact.html"><span class="material-symbols-outlined text-xs">chevron_right</span>FAQ</a></li>
-                    </ul>
-                </div>
+    <footer class="bg-background-dark text-white border-t border-gray-800 pt-16 pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          <!-- Column 1: Brand -->
+          <div class="space-y-6">
+            <div class="flex items-center gap-3">
+              <img src="logo_usih.JPG" alt="USIH Logo" class="h-10 w-auto object-contain rounded-md bg-white" />
+              <div class="flex flex-col">
+                <span class="text-xl font-black tracking-tighter text-white leading-none">USIH</span>
+                <span class="text-[10px] uppercase tracking-widest text-secondary font-bold">Gabon</span>
+              </div>
             </div>
-            <!-- Bottom -->
-            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-gray-500 text-sm text-center md:text-left">
-                    &copy; 2026 Université des Sciences et Ingénieries Hashem. Tous droits réservés.
-                </p>
-                <div class="flex items-center gap-2">
-                    <span class="text-gray-500 text-sm">Développé avec excellence au Gabon</span>
-                    <span class="material-symbols-outlined text-primary text-sm">favorite</span>
-                </div>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              L'Université des Sciences et Ingénieries Hashem s'engage à former les leaders technologiques de
+              demain avec rigueur et passion.
+            </p>
+            <div class="flex gap-4">
+              <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors"
+                href="#">
+                <span class="text-lg font-bold">f</span>
+              </a>
+              <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors"
+                href="#">
+                <span class="text-lg font-bold">in</span>
+              </a>
+              <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-colors"
+                href="#">
+                <span class="text-lg font-bold">x</span>
+              </a>
             </div>
+          </div>
+          <!-- Column 2: Navigation -->
+          <div>
+            <h4 class="text-lg font-bold mb-6 text-white border-b border-primary/30 inline-block pb-2">Navigation Rapide
+            </h4>
+            <ul class="space-y-4 text-gray-400 text-sm">
+              <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="index.html"><span
+                    class="material-symbols-outlined text-xs">chevron_right</span>Accueil</a></li>
+              <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="mission.html"><span
+                    class="material-symbols-outlined text-xs">chevron_right</span>À propos</a></li>
+              <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="filiere.html"><span
+                    class="material-symbols-outlined text-xs">chevron_right</span>Formations</a></li>
+              <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                  href="admissions_scolarite.html"><span
+                    class="material-symbols-outlined text-xs">chevron_right</span>Admissions</a></li>
+              <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="mission.html"><span
+                    class="material-symbols-outlined text-xs">chevron_right</span>Campus &amp; Vie</a></li>
+            </ul>
+          </div>
+          <!-- Column 3: Contact -->
+          <div>
+            <h4 class="text-lg font-bold mb-6 text-white border-b border-primary/30 inline-block pb-2">Contact</h4>
+            <ul class="space-y-4 text-gray-400 text-sm">
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary mt-0.5">location_on</span>
+                <span>Libreville, Charbonnages<br />Gabon</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary">phone</span>
+                <a href="tel:077828277" class="hover:text-primary transition-colors">077 82 82 77</a>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary">mail</span>
+                <a href="mailto:Contact@usih.fr" class="hover:text-primary transition-colors">Contact@usih.fr</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Column 4: Légal -->
+          <div>
+            <h4 class="text-lg font-bold mb-6 text-white border-b border-primary/30 inline-block pb-2">Légal</h4>
+            <ul class="space-y-4 text-gray-400 text-sm">
+              <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                    class="material-symbols-outlined text-xs">chevron_right</span>Mentions légales</a></li>
+              <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                    class="material-symbols-outlined text-xs">chevron_right</span>Politique de confidentialité</a></li>
+              <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                    class="material-symbols-outlined text-xs">chevron_right</span>Accessibilité</a></li>
+              <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="contact.html"><span
+                    class="material-symbols-outlined text-xs">chevron_right</span>FAQ</a></li>
+            </ul>
+          </div>
         </div>
+        <!-- Bottom -->
+        <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p class="text-gray-500 text-sm text-center md:text-left">
+            &copy; 2026 Université des Sciences et Ingénieries Hashem. Tous droits réservés.
+          </p>
+          <div class="flex items-center gap-2">
+            <span class="text-gray-500 text-sm">Développé avec excellence au Gabon</span>
+            <span class="material-symbols-outlined text-primary text-sm">favorite</span>
+          </div>
+        </div>
+      </div>
     </footer>
     <script>
-        // Ensure menu mobile script is only added once
-        if (!window.mobileMenuInitialized) {
-            document.addEventListener('DOMContentLoaded', () => {
-                const btn = document.getElementById('mobile-menu-btn');
-                const menu = document.getElementById('mobile-menu');
-                if (btn && menu) {
-                    btn.addEventListener('click', () => {
-                        menu.classList.toggle('hidden');
-                    });
-                }
+      // Ensure menu mobile script is only added once
+      if (!window.mobileMenuInitialized) {
+        document.addEventListener('DOMContentLoaded', () => {
+          const btn = document.getElementById('mobile-menu-btn');
+          const menu = document.getElementById('mobile-menu');
+          if (btn && menu) {
+            btn.addEventListener('click', () => {
+              menu.classList.toggle('hidden');
             });
-            window.mobileMenuInitialized = true;
-        }
+          }
+        });
+        window.mobileMenuInitialized = true;
+      }
     </script>
   </main>
 </body>

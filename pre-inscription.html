@@ -170,10 +170,8 @@
                     id="formsubmit-notice">
                     <span class="material-symbols-outlined text-blue-500 mt-0.5">info</span>
                     <div>
-                        <strong>Remarque pour l'administrateur :</strong> Lors de votre premier test d'envoi, FormSubmit
-                        vous enverra un lien sur <code>contact@usih.fr</code> pour activer l'adresse email. Cliquez
-                        dessus pour activer la réception définitive. (Note : la taille totale des pièces jointes ne doit
-                        pas dépasser 5Mo).
+                        <strong>Note :</strong> La taille totale des pièces jointes ne doit pas dépasser
+                        <strong>5Mo</strong>.
                     </div>
                 </div>
 
@@ -184,8 +182,9 @@
                     <!-- Required FormSubmit Fields -->
                     <input type="hidden" name="_subject" value="Nouvelle Pré-inscription USIH">
                     <input type="hidden" name="_template" value="table">
-                    <!-- Décommentez et modifiez l'URL ci-dessous si vous voulez rediriger vers l'accueil après l'envoi
-                    <input type="hidden" name="_next" value="https://oseannn.github.io/usih/"> -->
+                    <!-- Redirection après succès de la soumission -->
+                    <input type="hidden" name="_next"
+                        value="https://oseannn.github.io/usih/pre-inscription-succes.html">
 
                     <!-- Step 1: Infos Personnelles -->
                     <div class="form-step active" data-step="1">
